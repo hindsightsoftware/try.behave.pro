@@ -1,0 +1,19 @@
+machine:
+  ruby:
+    version: 1.9.3-p0-falcon
+  java:
+    version: openjdk7
+
+dependencies:
+  override:
+    - bundle install
+
+test:
+  override:
+    - jekyll build
+
+deployment:
+  aws:
+    branch: master
+      commands:
+        - s3_website push
