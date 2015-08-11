@@ -6,9 +6,38 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://try.behave.pro.s3-website-us-west-2.amazonaws.com/"
+twitter_username: behavepro
+github_username:  hindsightsoftware
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+highlighter: pygments
+gems:
+  - jemoji
+
+permalink:     /blog/:categories/:year/:y_day/:title.html
+paginate_path: /blog/page:num
+
+# social icons and sharing options
+social:
+  - icon:	twitter-square
+    url:	https://twitter.com/teamhindsight
+    desc: Follow us on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+  - icon:	github
+    url:	https://github.com/hindsightsoftware
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+
+  - icon:	google-plus-square
+    url:	https://www.google.com/+Hindsighttesting
+    desc:	Add us on google+
+    share_url: https://plus.google.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
