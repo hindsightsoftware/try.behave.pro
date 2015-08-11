@@ -16,13 +16,29 @@ highlighter: pygments
 gems:
   - jemoji
 
+authors:
+  aparkinson:
+    display_name: Alan Parkinson
+    author_image: "/assets/images/authors/aparkinson.png"
+    email: alan.parkinson@hindsightsoftware.co.uk
+    twitter: alan_parkinson
+    linkedin: https://uk.linkedin.com/in/agparkinson
+    github: aparkinson
+  cdowler:
+    display_name: Charlie Dowler
+    email: charlie.dowler@hindsightsoftware.co.uk
+    twitter: charliedowler
+    github: charliedowler
+
+paginate:	5
+
 permalink:     /blog/:categories/:year/:y_day/:title.html
 paginate_path: /blog/page:num
 
 # social icons and sharing options
 social:
   - icon:	twitter-square
-    url:	https://twitter.com/teamhindsight
+    url:	https://twitter.com/behavepro
     desc: Follow us on twitter
     share_url: http://twitter.com/share
     share_title: ?text=
