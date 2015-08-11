@@ -17,5 +17,5 @@ test:
 deployment:
   aws:
     branch: master
-      commands:
-        - s3_website push
+    commands:
+      - s3_website push
