@@ -80,3 +80,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 2.5.3)
   s3_website (~> 2.11.0)
+
+BUNDLED WITH
+   1.10.5

@@ -2,7 +2,7 @@ machine:
   timezone:
     Europe/London
   ruby:
-    version: 1.9.3-p0-falcon
+    version: 2.2.2
   java:
     version: openjdk7
 
@@ -12,7 +12,7 @@ dependencies:
 
 test:
   override:
-    - jekyll build
+    - bundle exec jekyll build
 
 deployment:
   aws:
