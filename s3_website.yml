@@ -31,7 +31,7 @@ s3_endpoint: us-west-2
 
 s3_reduced_redundancy: true
 
-# cloudfront_distribution_id: your-dist-id
+cloudfront_distribution_id: EZJM71UVLQ5NH
 
 # cloudfront_distribution_config:
 #   default_cache_behavior:
