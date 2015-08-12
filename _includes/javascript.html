@@ -1,0 +1,33 @@
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-43792439-2', 'auto', {'allowLinker': true});
+    ga('require', 'linker');
+    ga('linker:autoLink', ['behave.pro', 'www.behave.pro', 'marketplace.atlassian.com'] );
+    ga('send', 'pageview');
+
+</script>
+
+<script>
+    // Include the UserVoice JavaScript SDK (only needed once on a page)
+    UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/vsd3XVWVqpCojFBC2zYONQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+    // Set colors
+    UserVoice.push(['set', {
+        accent_color: '#448dd6',
+        trigger_color: 'white',
+        trigger_background_color: '#448dd6',
+        smartvote_enabled: false,
+        post_suggestion_enabled: false,
+        screenshot_enabled: false
+    }]);
+
+    // Add default trigger to the bottom-right corner of the window:
+    UserVoice.push(['addTrigger', {mode: 'contact', trigger_position: 'bottom-right' }]);
+
+</script>
