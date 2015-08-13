@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properities -->
+    <title>Homepage - Semantic</title>
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/reset.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/site.css">
+
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/container.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/grid.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/header.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/image.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/item.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/menu.css">
+
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/divider.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/segment.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/button.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/list.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/icon.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/transition.css">
+    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="/styles/nouislider.css">
+    <link rel="stylesheet" type="text/css" href="/styles/nouislider.pips.css">
+
+    <style type="text/css">
+
+        .hidden.menu {
+            display: none;
+        }
+
+        .masthead.segment {
+            min-height: 700px;
+            padding: 1em 0em;
+        }
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+        .masthead .ui.menu .ui.button {
+            margin-left: 0.5em;
+        }
+        .masthead h1.ui.header {
+            margin-top: 3em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+        .masthead h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+        }
+
+        .ui.inverted.segment {
+            background-color: #1A243A;
+        }
+
+        .ui.vertical.stripe {
+            /*padding: 8em 0em;*/
+        }
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+        .ui.vertical.stripe .button + h3,
+        .ui.vertical.stripe p + h3 {
+            margin-top: 3em;
+        }
+        .ui.vertical.stripe .floated.image {
+            clear: both;
+        }
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+        .quote.stripe.segment .grid .column {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+
+        .footer.segment {
+            padding: 5em 0em;
+        }
+
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .ui.fixed.menu {
+                display: none !important;
+            }
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+            .masthead.segment {
+                min-height: 350px;
+            }
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+        }
+
+
+
+
+
+    </style>
+
+    <script src="/jquery.js"></script>
+    <script src="/scripts/nouislider.js"></script>
+    <script src="/scripts/wNumb.js"></script>
+    <script src="/semantic/dist/components/visibility.js"></script>
+    <script src="/semantic/dist/components/sidebar.js"></script>
+    <script src="/semantic/dist/components/transition.js"></script>
+    <script>
+        $(document)
+                .ready(function() {
+
+                    // fix menu when passed
+                    $('.masthead')
+                            .visibility({
+                                once: false,
+                                onBottomPassed: function() {
+                                    $('.fixed.menu').transition('fade in');
+                                },
+                                onBottomPassedReverse: function() {
+                                    $('.fixed.menu').transition('fade out');
+                                }
+                            })
+                    ;
+
+                    // create sidebar and attach to menu open
+//                    $('.ui.sidebar')
+//                            .sidebar('attach events', '.toc.item')
+//                    ;
+
+                })
+        ;
+    </script>
+</head>
+<body>
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+    <div class="ui container">
+        <div class="item"><img src="/images/logo_light.png" style="width: 9.5em"/></div>
+        <div class="right menu">
+            <a class="item">Features</a>
+            <a class="item">Pricing</a>
+            <a class="item">Blog</a>
+            <div class="item">
+                <a class="ui primary button">Try now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+    <a class="active item">Home</a>
+    <a class="item">Work</a>
+    <a class="item">Company</a>
+    <a class="item">Careers</a>
+    <a class="item">Login</a>
+    <a class="item">Signup</a>
+</div>
+
+
+<!-- Page Contents -->
+<div style="height:100%">
+    <div class="ui inverted vertical masthead center aligned segment" style="min-height:100%; overflow:hidden">
+
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing menu">
+                <a class="toc item">
+                    <i class="sidebar icon"></i>
+                </a>
+                <div class="item"><img src="/images/logo.png" style="width: 9.5em"/></div>
+                <div class="right menu">
+                    <a class="item">Features</a>
+                    <a class="item">Pricing</a>
+                    <a class="item">Blog</a>
+                    <div class="item">
+                        <a class="ui inverted button">Try now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui text container">
+            <div class="ui stackable two column grid">
+                <div class="column">
+                    <h1 class="ui inverted header">
+                        Better user stories
+                    </h1>
+                    <h2>Behave Pro, an intuative tool for writing your specifications together.</h2>
+                    <div style="margin-bottom:50px" class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+                </div>
+                <div class="column">
+                    <img class="welcome-gif" src="/images/product2.gif" />
+                </div>
+            </div>
+            <div class="ui row social-proof">
+                <img src="/images/social-proof/Boeing Logo.png" />
+                <img src="/images/social-proof/Hp Logo.png" />
+                <img src="/images/social-proof/easyJet Logo.png" />
+                <img src="/images/social-proof/CSC Logo.png" />
+                <img src="/images/social-proof/Intel Logo.png" />
+                <img src="/images/social-proof/Fixnetix Logo.png" />
+                <img src="/images/social-proof/First Giving Logo.png" />
+                <!--<img src="/images/social-proof/Jetstar Logo.png" />-->
+                <!--<img src="/images/social-proof/Samsung Accelerator Logo.png" />-->
+                <!--<img src="/images/social-proof/NextEra Energy Logo.png" />-->
+                <!--<img src="/images/social-proof/ON24 Logo.png" />-->
+                <!--<img src="/images/social-proof/TicketFly Logo.png" />-->
+                <!--<img src="/images/social-proof/Verizon Logo.png" />-->
+                <!--<img src="/images/social-proof/Unversity of Cambridge Logo.png" />-->
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+            <!--<div class="row">-->
+                <!--<div class="sixteen wide column">-->
+                    <!--<h4 class="ui horizontal divider header">-->
+                        <!--<i class="browser icon"></i>-->
+                        <!--Features-->
+                    <!--</h4>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                <!--<div class="eight wide center aligned column">-->
+                    <!--<h3>Intuitive user interface</h3>-->
+                    <!--<img src="/images/product1.png" style="max-height: 300px"/>-->
+                    <!--<p>Using the award winning Behave Pro user interface, you can easily create, manage and collaborate on your product specifications using keyboard shortcuts and Behave Flow.</p>-->
+                <!--</div>-->
+                <!--<div class="eight wide center aligned column">-->
+                    <!--<h3>Approvals & Questions</h3>-->
+                    <!--<img src="/images/product1.png" style="max-height: 300px"/>-->
+                    <!--<p>I am a feature, I do feature related things. I like being a feature. I am a feature, I do feature related things. I like being a feature.</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                <!--<div class="sixteen wide center aligned column">-->
+                    <!--<h3>Build tool integrations</h3>-->
+                    <!--<img src="/images/product1.png" style="max-height: 300px"/>-->
+                    <!--<p>I am a feature, I do feature related things. I like being a feature. I am a feature, I do feature related things. I like being a feature.</p>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <div class="row features-row">
+                <div class="eight wide left aligned column">
+                    <img src="/images/product1.png" style="height:350px; width:500px; border-radius:12px"/>
+                </div>
+
+                <div class="eight wide left aligned column">
+                    <h1>Exporting to build tools</h1>
+                    <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra, dolor eget gravida laoreet, augue dui condimentum quam, sed cursus velit risus non erat. Duis gravida erat ac varius tristique. Sed eleifend vel erat et dignissim. Quisque sit amet augue pellentesque, ullamcorper nulla id, auctor metus.</p>
+                </div>
+            </div>
+
+            <div class="row features-row">
+                <div class="eight wide left aligned column">
+                    <h1>Intuitive user interface</h1>
+                    <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra, dolor eget gravida laoreet, augue dui condimentum quam, sed cursus velit risus non erat. Duis gravida erat ac varius tristique. Sed eleifend vel erat et dignissim. Quisque sit amet augue pellentesque, ullamcorper nulla id, auctor metus.</p>
+                </div>
+
+                <div class="eight wide left aligned column">
+                    <img src="/images/product1.png" style="height:350px; width:500px; border-radius:12px"/>
+                </div>
+            </div>
+
+            <div class="row features-row">
+                <div class="eight wide left aligned column">
+                    <img src="/images/product1.png" style="height:350px; width:500px; border-radius:12px"/>
+                </div>
+
+                <div class="eight wide left aligned column">
+                    <h1>Approvals and Questions</h1>
+                    <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra, dolor eget gravida laoreet, augue dui condimentum quam, sed cursus velit risus non erat. Duis gravida erat ac varius tristique. Sed eleifend vel erat et dignissim. Quisque sit amet augue pellentesque, ullamcorper nulla id, auctor metus.</p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="center aligned column">
+                    <a class="ui huge button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ui vertical stripe segment">
+        <div class="ui equal width stackable internally grid">
+            <div class="center aligned row">
+                <div class="center aligned column">
+                    <h4 class="ui horizontal divider header">
+                        <i class="dollar icon"></i>
+                        Pricing
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row features-row" style="padding-right: 50px;padding-left: 110px;">
+                 <div class="six wide center aligned column pricing-row" style="margin-bottom:80px">
+                    <h3><i class="cloud icon"></i> Cloud</h3>
+                    <p class="pricing-description">Behave Pro can be up and running in the Cloud within minutes. It’s easily scalable based on user numbers or geographical location, with uptime availability of 99.99%.</p>
+                </div>
+
+                <div class="ten wide center aligned column">
+                    <div class="sliders-value" id="cloud-slider-value"></div>
+                    <p><div class="pricing-sliders" id="slider-handles-cloud"></div></p>
+                </div>
+
+                <div class="ten wide center aligned column">
+                    <div class="sliders-value" id="server-slider-value"></div>
+                    <p><div class="pricing-sliders" id="slider-handles-server"></div></p>
+                </div>
+
+                <div class="six wide center aligned column pricing-row">
+                    <h3><i class="server icon"></i> Server</h3>
+                    <p class="pricing-description">Behave Pro can also run on your own hardware with no requirement for internet access, providing the same great features of Cloud with peace of mind running behind your firewall. </p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+        <h4 class="ui horizontal divider header">
+            <i class="browser icon"></i>
+            More Features
+        </h4>
+    <div class="ui vertical stripe segment">
+    <div class="ui equal width grid">
+        <div class="column">
+            <div class="ui items">
+            <div class="item">
+                <div class="ui image">
+                    <i class="huge home icon"></i>
+                </div>
+                <div class="content">
+                    <div class="header"><h2>Email Notifications</h2></div>
+                    <div class="meta">
+                        <span>Recieve notifications when a stakeholder modifies requirements</span>
+                    </div>
+                    <div class="description">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="column">
+            <div class="ui items">
+            <div class="item">
+                <div class="ui image">
+                    <i class="huge terminal icon"></i>
+                </div>
+                <div class="content">
+                    <div class="header"><h2>JQL Search</h2></div>
+                    <div class="meta">
+                        <span>Powerful JQL search within JIRA</span>
+                    </div>
+                    <div class="description">
+                        <p></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui items">
+            <div class="item">
+                <div class="ui image">
+                    <i class="huge cloud upload icon"></i>
+                </div>
+                <div class="content">
+                    <div class="header"><h2>Importing</h2></div>
+                    <div class="meta">
+                        <span>Import your existing feature files</span>
+                    </div>
+                    <div class="description">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+                </div>
+        </div>
+    </div>
+        </div>
+
+
+    <!--<div class="ui vertical stripe segment">-->
+        <!--<div class="ui text container">-->
+            <!--<h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>-->
+            <!--<p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>-->
+            <!--<a class="ui large button">Read More</a>-->
+            <!--<h4 class="ui horizontal header divider">-->
+                <!--<a href="#">Case Studies</a>-->
+            <!--</h4>-->
+            <!--<h3 class="ui header">Did We Tell You About Our Bananas?</h3>-->
+            <!--<p>Yes I know you probably disregarded the earlier boasts as non-sequitor filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>-->
+            <!--<a class="ui large button">I'm Still Quite Interested</a>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                    <h4 class="ui inverted header">About</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Sitemap</a>
+                        <a href="#" class="item">Contact Us</a>
+                        <a href="#" class="item">Religious Ceremonies</a>
+                        <a href="#" class="item">Gazebo Plans</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Services</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Banana Pre-Order</a>
+                        <a href="#" class="item">DNA FAQ</a>
+                        <a href="#" class="item">How To Access</a>
+                        <a href="#" class="item">Favorite X-Men</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">Footer Header</h4>
+                    <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var cloudSlider = document.getElementById('slider-handles-cloud');
+    var serverSlider = document.getElementById('slider-handles-server');
+
+    noUiSlider.create(cloudSlider, {
+        start: 10,
+        snap: true,
+        range: {
+            'min': [10],
+            '20%': [15],
+            '40%': [25],
+            '60%': [50],
+            '80%': [100],
+            '100%': [500],
+            'max': [2000]
+        },
+        step: 10,
+        connect: 'lower',
+        pips: {
+            mode: 'positions',
+            values: [0, 10, 25, 30, 40, 50, 60, 70, 80, 90, 100],
+            density: 20,
+            stepped: true,
+            thousand: ', ',
+            format: wNumb({
+                postfix: 'users'
+            })
+        }
+    });
+
+    var cloudSliderValue = document.getElementById('cloud-slider-value');
+
+    var cloudPriceMap = {
+        '10': 10,
+        '15': 50,
+        '25': 100,
+        '50': 200,
+        '100': 300,
+        '500': 500,
+        '2000': 1000
+    };
+    var serverPriceMap = {
+        '10': 100,
+        '25': 600,
+        '50': 1100,
+        '100': 2000,
+        '500': 6000,
+        '2000': 8000,
+        '10000': 10000
+    };
+
+    cloudSlider.noUiSlider.on('update', function( values, handle ) {
+        cloudSliderValue.innerHTML = values[handle].split('.')[0] + ' users\n$' + cloudPriceMap[values[handle].split('.')[0]]
+    });
+
+    noUiSlider.create(serverSlider, {
+        start: 10,
+        snap: true,
+        range: {
+            'min': [10],
+            '20%': [25],
+            '40%': [50],
+            '60%': [100],
+            '80%': [500],
+            '100%': [2000],
+            'max': [10000]
+        },
+        step: 10,
+        connect: 'lower',
+        pips: {
+            mode: 'positions',
+            values: [0, 10, 25, 30, 40, 50, 60, 70, 80, 90, 100],
+            density: 20,
+            stepped: true,
+            thousand: ', ',
+            format: wNumb({
+                postfix: 'users'
+            })
+        }
+    });
+
+    var serverSliderValue = document.getElementById('server-slider-value');
+
+    serverSlider.noUiSlider.on('update', function( values, handle ) {
+        serverSliderValue.innerHTML = values[handle].split('.')[0] + ' users\n$' + serverPriceMap[values[handle].split('.')[0]]
+    });
+</script>
+</body>
+
+</html>
