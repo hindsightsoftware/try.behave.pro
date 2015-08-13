@@ -5,16 +5,17 @@ layout: blog
 <article class="post">
 
   <header class="post-header">
-      <h1 class="post-title">{{ page.title }}</h1>
+      <img class="post-image" src="//dc8hdnsmzapvm.cloudfront.net/assets/images/blog/categories/advanced-seo.png?74da3a3">
       <section class="author">
               {% if author.author_image %}
               <img src="{{ author.author_image }}" alt="{{ author.display_name }}"/>
               {% endif %}
-              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author.display_name }}</h4>
-              on
+              By: <span class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author.display_name }}</span>
+
               <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
               <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
       </section>
+      <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
   <section class="post-content">

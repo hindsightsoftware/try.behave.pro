@@ -1,11 +1,5 @@
 
-.author {
 
-  img {
-    border-radius: 50%;
-    border: solid 3px #fff;
-  }
-}
 
 .post {
 
@@ -20,10 +14,44 @@
 
   blockquote {
     color: #868686;
-    border-left: 4px solid #17B6E9;
+    border-left: 4px solid $brand-light-blue;
     padding-left: 15px;
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
+  }
+
+  .post-header {
+
+    h1 {
+      color: $brand-light-blue;
+      margin-top: 1em;
+    }
+
+    time {
+      font-size: 12px;
+      margin-left: 20px;
+      float: right !important;
+    }
+
+    img.post-image {
+
+    }
+
+    .author {
+      font-size: 14px;
+
+      img {
+        margin: -45px 10px 0 0;
+        border-radius: 50%;
+        border: solid 3px #fff;
+        width: 80px;
+        z-index: 9;
+      }
+    }
+
+    .author-name {
+      color: $brand-light-blue;
+    }
   }
 }
