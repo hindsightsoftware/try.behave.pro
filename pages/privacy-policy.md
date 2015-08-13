@@ -99,7 +99,7 @@ To request that your user information not be used to contact you
 To request that your user information be removed from any solicitation list that we use
 To request that your user information be deleted from our records
 To opt out of being solicited by Hindsight or third parties
-To exercise any of these rights, please contact us at privacy@hindsightsoftware.com or by mail to Hindsight Software Ltd, 12-14 Bridge Street, Leatherhead, Surrey, KT22 8BZ, United Kingdom, Attention: Privacy. We will promptly change, correct, or delete your information and notify you of the action we have taken.
+To exercise any of these rights, please contact us at privacy@hindsightsoftware.com or by mail to Hindsight Software Ltd, 2a The Quadrant, Epsom, Surrey, KT17 4RH, United Kingdom, Attention: Privacy. We will promptly change, correct, or delete your information and notify you of the action we have taken.
 
 ####4.2. To Unsubscribe From Our Communications
 You may unsubscribe from our marketing communications by clicking on the "unsubscribe" link located on the bottom of our e-mails, or by sending us email us at privacy@hindsightsoftware.com or by mail to Hindsight Software Ltd, 12-14 Bridge Street, Leatherhead, Surrey, KT22 8BZ, United Kingdom, Attention: Privacy. Customers cannot opt out of receiving transactional emails related to their account with us or the Subscription Service.
