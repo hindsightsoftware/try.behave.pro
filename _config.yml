@@ -12,9 +12,8 @@ github_username:  hindsightsoftware
 
 # Build settings
 markdown: redcarpet
-highlighter: pygments
-gems:
-  - jemoji
+highlighter: rouge
+
 
 authors:
   aparkinson:
