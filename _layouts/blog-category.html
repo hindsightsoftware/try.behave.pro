@@ -7,7 +7,7 @@
 
     {% include blog-header.html %}
 
-    <div class="page-content">
+    <main role="main" class="page-content">
       <div class="wrapper">
           <div class="home">
 
@@ -15,24 +15,16 @@
 
               {{ content }}
 
-              <ul class="post-list">
-                  {% for post in site.categories.[page.type] %}
-                  <li>
-                      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-                      <h2>
-                          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                      </h2>
-                  </li>
-                  {% endfor %}
-              </ul>
+              {% for post in site.categories.[page.type] %}
+                  {% include blog-post-excerpt.html %}
+              {% endfor %}
 
               <p class="rss-subscribe">subscribe <a href="{{ "/blog/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
           </div>
 
       </div>
-    </div>
+    </main>
 
     {% include blog-footer.html %}
 

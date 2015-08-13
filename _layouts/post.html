@@ -2,26 +2,23 @@
 layout: blog
 ---
 {% assign author = site.authors[page.author] %}
-<div class="post">
+<article class="post">
 
   <header class="post-header">
-      <div class="post-meta">
-          <h1 class="post-title">{{ page.title }}</h1>
-          <div class="cf post-meta-text">
-              <div class="author-image" style="background-image: url({{ author.author_image }})">Blog Logo</div>
+      <h1 class="post-title">{{ page.title }}</h1>
+      <section class="author">
+              {% if author.author_image %}
+              <img src="{{ author.author_image }}" alt="{{ author.display_name }}"/>
+              {% endif %}
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author.display_name }}</h4>
               on
               <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
               <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
-          </div>
-          <div style="text-align:center">
-              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
-          </div>
-      </div>
+      </section>
   </header>
 
-  <article class="post-content">
+  <section class="post-content">
     {{ content }}
-  </article>
+  </section>
 
-</div>
+</article>

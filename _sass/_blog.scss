@@ -1,0 +1,29 @@
+
+.author {
+
+  img {
+    border-radius: 50%;
+    border: solid 3px #fff;
+  }
+}
+
+.post {
+
+  h1, h2, h3, h4, h5, h5 {
+    color: #1A243A;
+  }
+
+  pre, code {
+    background-color: #eeeeee;
+    overflow-x: hidden;
+  }
+
+  blockquote {
+    color: #868686;
+    border-left: 4px solid #17B6E9;
+    padding-left: 15px;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+  }
+}

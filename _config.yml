@@ -29,6 +29,10 @@ authors:
     email: charlie.dowler@hindsightsoftware.co.uk
     twitter: charliedowler
     github: charliedowler
+  gmccreadie:
+    display_name: George McCreadie
+    author_image: "/assets/images/authors/gmccreadie.png"
+    email: george.mccreadie@hindsightsoftware.co.uk
 
 paginate:	5
 
