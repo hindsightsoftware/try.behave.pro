@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include blog-header.html %}
+
+    <main role="main" class="page-content">
+      <div class="wrapper">
+          <div class="home">
+
+              <h1 class="page-heading">Posts</h1>
+
+              {{ content }}
+
+              {% for post in site.categories.[page.type] %}
+                  {% include blog-post-excerpt.html %}
+              {% endfor %}
+
+              <p class="rss-subscribe">subscribe <a href="{{ "/blog/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+          </div>
+
+      </div>
+    </main>
+
+    {% include blog-footer.html %}
+
+    {% include javascript.html %}
+  </body>
+
+</html>
