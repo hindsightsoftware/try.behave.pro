@@ -31,6 +31,24 @@
     height:100%;
     margin:0px 50px;
 }
+.build-tools {
+    height: 280px;
+    background-color: #a4a3a3;
+    padding:75px 10px 60px 10px;
+    text-align: center;
+}
+.build-tools h2 {
+    color: #fff;
+    font-size: large;
+}
+.build-tools img {
+    height: 50px;
+    margin:0px 50px;
+}
+.build-tools .logo {
+    height: auto;
+    max-width: 150px;
+}
 
 .features-row {
     margin:40px 0px;
@@ -66,4 +84,8 @@
 #more-features .item {
     display: inline-block;
     float:left;
+}
+
+.feature-images {
+    border-radius:12px;
 }

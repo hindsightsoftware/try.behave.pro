@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="/styles/index.css">
     <link rel="stylesheet" type="text/css" href="/styles/nouislider.css">
     <link rel="stylesheet" type="text/css" href="/styles/nouislider.pips.css">
+    <link href="/lightbox/css/lightbox.css" rel="stylesheet">
 
     <style type="text/css">
 
@@ -156,6 +157,23 @@
 //                            .sidebar('attach events', '.toc.item')
 //                    ;
 
+                    $(function() {
+                        $('a[href*=#]:not([href=#])').click(function() {
+                            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+                                var target = $(this.hash);
+                                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                                console.log(target)
+                                if (target.length) {
+                                    $('html,body').animate({
+                                        scrollTop: target.offset().top
+                                    }, 800);
+                                    return false;
+                                }
+                            }
+                        });
+                    });
+
                 })
         ;
     </script>
@@ -167,8 +185,8 @@
     <div class="ui container">
         <div class="item"><img src="/images/logo_light.png" style="width: 9.5em"/></div>
         <div class="right menu">
-            <a class="item">Features</a>
-            <a class="item">Pricing</a>
+            <a class="item" href="#features">Features</a>
+            <a class="item" href="#pricing">Pricing</a>
             <a class="item">Blog</a>
             <div class="item">
                 <a class="ui primary button">Try now</a>
@@ -199,8 +217,8 @@
                 </a>
                 <div class="item"><img src="/images/logo.png" style="width: 9.5em"/></div>
                 <div class="right menu">
-                    <a class="item">Features</a>
-                    <a class="item">Pricing</a>
+                    <a class="item" href="#features">Features</a>
+                    <a class="item" href="#pricing">Pricing</a>
                     <a class="item">Blog</a>
                     <div class="item">
                         <a class="ui inverted button">Try now</a>
@@ -244,7 +262,7 @@
     </div>
 
     <div class="ui vertical stripe segment">
-        <div class="ui middle aligned stackable grid container">
+        <div class="ui middle aligned stackable grid container" name="features">
             <!--<div class="row">-->
                 <!--<div class="sixteen wide column">-->
                     <!--<h4 class="ui horizontal divider header">-->
@@ -275,7 +293,9 @@
 
             <div class="row features-row">
                 <div class="eight wide left aligned column">
-                    <img src="/images/product1.png" style="height:350px; width:500px; border-radius:12px"/>
+                    <a href="/images/specifications-exported-feature.png" data-lightbox="image-1" data-title="Exported feature from Specifications page">
+                        <img src="/images/feature-focused-zoomed.png" class="feature-images" />
+                    </a>
                 </div>
 
                 <div class="eight wide left aligned column">
@@ -314,9 +334,7 @@
             </div>
         </div>
     </div>
-
-
-    <div class="ui vertical stripe segment">
+    <div class="ui vertical stripe segment" name="pricing" style="padding-top:55px">
         <div class="ui equal width stackable internally grid">
             <div class="center aligned row">
                 <div class="center aligned column">
@@ -353,70 +371,155 @@
         </div>
     </div>
 
-        <h4 class="ui horizontal divider header">
-            <i class="browser icon"></i>
-            More Features
-        </h4>
     <div class="ui vertical stripe segment">
-    <div class="ui equal width grid">
-        <div class="column">
-            <div class="ui items">
-            <div class="item">
-                <div class="ui image">
-                    <i class="huge home icon"></i>
-                </div>
-                <div class="content">
-                    <div class="header"><h2>Email Notifications</h2></div>
-                    <div class="meta">
-                        <span>Recieve notifications when a stakeholder modifies requirements</span>
-                    </div>
-                    <div class="description">
-                        <p></p>
-                    </div>
-                </div>
+        <div class="ui row build-tools">
+            <div class="center aligned column">
+                <h2>We support loads of build tools</h2>
+                <br />
             </div>
-        </div>
-        </div>
+            <!--<img src="/images/dotnet.png" />-->
+            <!--<img src="/images/gradle.png" />-->
+            <img src="/images/build-tool-logos/python.png" />
+            <img src="/images/build-tool-logos/dotnet.png" />
+            <img src="/images/build-tool-logos/maven.png" />
+            <img src="/images/build-tool-logos/nodejs.png" />
+            <img src="/images/build-tool-logos/ruby.png" />
+            <img src="/images/build-tool-logos/gradle.png" />
+            <!--<img src="/images/nodejs.png" />-->
+            <!--<img src="/images/python.png" class="logo" />-->
+            <!--<img src="/images/ruby.png" class="logo" />-->
+            <!--<img src="/images/social-proof/Jetstar Logo.png" />-->
+            <!--<img src="/images/social-proof/Samsung Accelerator Logo.png" />-->
+            <!--<img src="/images/social-proof/NextEra Energy Logo.png" />-->
+            <!--<img src="/images/social-proof/ON24 Logo.png" />-->
+            <!--<img src="/images/social-proof/TicketFly Logo.png" />-->
+            <!--<img src="/images/social-proof/Verizon Logo.png" />-->
+            <!--<img src="/images/social-proof/Unversity of Cambridge Logo.png" />-->
 
-        <div class="column">
-            <div class="ui items">
-            <div class="item">
-                <div class="ui image">
-                    <i class="huge terminal icon"></i>
-                </div>
-                <div class="content">
-                    <div class="header"><h2>JQL Search</h2></div>
-                    <div class="meta">
-                        <span>Powerful JQL search within JIRA</span>
-                    </div>
-                    <div class="description">
-                        <p></p>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="ui items">
-            <div class="item">
-                <div class="ui image">
-                    <i class="huge cloud upload icon"></i>
-                </div>
-                <div class="content">
-                    <div class="header"><h2>Importing</h2></div>
-                    <div class="meta">
-                        <span>Import your existing feature files</span>
-                    </div>
-                    <div class="description">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-                </div>
         </div>
     </div>
-        </div>
+    <div class="ui vertical stripe segment">
+        <div class="ui equal width stackable grid" style="width: 60%;margin: 50px auto;">
+            <div class="ui row">
+                <div class="center aligned column">
+                    <h1 class="ui header"><i class="browser icon"></i>More Features</h1>
+                    <br />
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui items">
+                    <div class="item">
+                        <div class="ui image">
+                            <i class="huge mail icon"></i>
+                        </div>
+                        <div class="content">
+                            <div class="header"><h2>Email Notifications</h2></div>
+                            <div class="meta">
+                                <span>Recieve notifications when a stakeholder modifies requirements</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="column">
+                <div class="ui items">
+                    <div class="item">
+                        <div class="ui image">
+                            <i class="huge terminal icon"></i>
+                        </div>
+                        <div class="content">
+                            <div class="header"><h2>JQL Search</h2></div>
+                            <div class="meta">
+                                <span>Powerful JQL search within JIRA</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui items">
+                    <div class="item">
+                        <div class="ui image">
+                            <i class="huge cloud upload icon"></i>
+                        </div>
+                        <div class="content">
+                            <div class="header"><h2>Importing</h2></div>
+                            <div class="meta">
+                                <span>Import your existing feature files</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui equal width stackable grid" style="width: 60%;margin: 50px auto;">
+            <div class="column">
+                <div class="ui items">
+                    <div class="item">
+                        <div class="ui image">
+                            <i class="huge edit icon"></i>
+                        </div>
+                        <div class="content">
+                            <div class="header"><h2>Superior editor</h2></div>
+                            <div class="meta">
+                                <span>description</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui items">
+                    <div class="item">
+                        <div class="ui image">
+                            <i class="huge tag icon"></i>
+                        </div>
+                        <div class="content">
+                            <div class="header"><h2>Tags</h2></div>
+                            <div class="meta">
+                                <span>Tag support</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui items">
+                    <div class="item">
+                        <div class="ui image">
+                            <i class="huge code icon"></i>
+                        </div>
+                        <div class="content">
+                            <div class="header"><h2>Code complete</h2></div>
+                            <div class="meta">
+                                <span>Auto completion of steps</span>
+                            </div>
+                            <div class="description">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
 
     <!--<div class="ui vertical stripe segment">-->
         <!--<div class="ui text container">-->
@@ -549,6 +652,7 @@
         serverSliderValue.innerHTML = values[handle].split('.')[0] + ' users\n$' + serverPriceMap[values[handle].split('.')[0]]
     });
 </script>
+<script src="/lightbox/js/lightbox.js"></script>
 </body>
 
 </html>
