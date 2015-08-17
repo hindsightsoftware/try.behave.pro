@@ -22,4 +22,30 @@ layout: blog
     {{ content }}
   </section>
 
+    <section class="share-widget-container-fixed">
+        <div class="share">
+            {% for social in site.social %}
+            {% if social.share_url != null %}
+            <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}"
+                onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
+                <i class="fa fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <form data-url="#" class="signup-form" novalidate="novalidate">
+            <p>
+                <label for="signup_email">Email Address</label>
+                <input type="email" name="email" id="signup_email" placeholder="Email Address" value="" class="error">
+            </p>
+            <p class="button"><input type="submit" name="" value="Subscribe" class="on"></p>
+        </form>
+    </section>
+
+    <section class="product-blog-cta-container">
+        <div class="product-cta">
+            THE WORLD'S SMARTEST COMPANIES USE BEHAVE PRO <a href="#">SEE WHY</a>
+        </div>
+    </section>
+
 </article>

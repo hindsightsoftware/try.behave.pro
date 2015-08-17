@@ -40,7 +40,7 @@ paginate_path: /blog/page:num
 
 # social icons and sharing options
 social:
-  - icon:	twitter-square
+  - icon:	twitter
     url:	https://twitter.com/behavepro
     desc: Follow us on twitter
     share_url: http://twitter.com/share
@@ -54,9 +54,16 @@ social:
     share_title:
     share_link:
 
-  - icon:	google-plus-square
+  - icon:	google-plus
     url:	https://www.google.com/+Hindsighttesting
     desc:	Add us on google+
     share_url: https://plus.google.com/share
     share_title: ?text=
+    share_link: "&amp;url="
+
+  - icon:	linkedin
+    url:	https://www.google.com/+Hindsighttesting
+    desc:	Follow us on LinkedIn
+    share_url: http://www.linkedin.com/shareArticle
+    share_title: ?title=
     share_link: "&amp;url="
