@@ -22,15 +22,25 @@
     bottom:0px;
     background-color:#fff;
     color:black;
-    height: 160px;
+    height: auto;
     padding:60px 10px 60px 10px;
     overflow: hidden;
 }
 
 .social-proof img {
-    height:100%;
-    margin:0px 50px;
+    max-height: 80px;
+    margin:20px 50px;
+    max-width: 100px;
 }
+
+@media only screen and (max-width: 767px) {
+    .social-proof {
+        position: relative;
+        top: 100% !important;
+        bottom: auto !important;
+    }
+}
+
 .build-tools {
     height: 280px;
     background-color: #a4a3a3;
@@ -88,4 +98,22 @@
 
 .feature-images {
     border-radius:12px;
+}
+
+.feature-responsive {
+    display: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .feature-normal {
+        display:none !important;
+    }
+
+    .feature-responsive {
+        display:block !important;
+    }
+}
+
+.row > .column > a > img {
+    max-width:100%;
 }
