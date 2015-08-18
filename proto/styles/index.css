@@ -23,14 +23,21 @@
     background-color:#fff;
     color:black;
     height: auto;
-    padding:60px 10px 60px 10px;
     overflow: hidden;
 }
 
 .social-proof img {
-    max-height: 80px;
-    margin:20px 50px;
-    max-width: 100px;
+    max-height:150px;
+    width:auto !important;
+    max-width:150px;
+}
+
+#owl-example .item{
+    margin: 3px;
+}
+#owl-example img {
+    width: 100%;
+    height: auto;
 }
 
 @media only screen and (max-width: 767px) {
@@ -39,10 +46,23 @@
         top: 100% !important;
         bottom: auto !important;
     }
+
+    .ui.container {
+        margin-left:0px !important;
+        margin-right:0px !important;
+    }
+
+    .ui.segment {
+        padding:0px !important;
+    }
+    
+    .responsive-align {
+        text-align: center !important;
+    }
 }
 
 .build-tools {
-    height: 280px;
+    height: 200px;
     background-color: #a4a3a3;
     padding:75px 10px 60px 10px;
     text-align: center;
@@ -116,4 +136,9 @@
 
 .row > .column > a > img {
     max-width:100%;
+}
+
+.card {
+    padding: 30px !important;
+    color: #000;
 }

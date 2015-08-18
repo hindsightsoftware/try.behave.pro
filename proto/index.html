@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/segment.css">
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/button.css">
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/list.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/card.css">
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/icon.css">
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/sidebar.css">
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/transition.css">
@@ -31,6 +32,9 @@
     <link rel="stylesheet" type="text/css" href="/styles/nouislider.css">
     <link rel="stylesheet" type="text/css" href="/styles/nouislider.pips.css">
     <link href="/lightbox/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.css"/>
 
     <style type="text/css">
 
@@ -135,9 +139,20 @@
     <script src="/semantic/dist/components/visibility.js"></script>
     <script src="/semantic/dist/components/sidebar.js"></script>
     <script src="/semantic/dist/components/transition.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
     <script>
         $(document)
                 .ready(function() {
+                    $("#owl-example").owlCarousel({
+                        autoPlay: 5000,
+                        items: 4,
+                        pagination: false
+                    });
+                    $("#owl-example2").owlCarousel({
+                        autoPlay: 5000,
+                        items: 4,
+                        pagination: false
+                    });
 
                     // fix menu when passed
                     $('.masthead')
@@ -240,11 +255,23 @@
                     <img class="welcome-gif" src="/images/product2.gif" />
                 </div>
             </div>
-            <div class="ui equal width stackable grid middle aligned social-proof">
-                <div class="column"><img src="/images/social-proof/Boeing Logo.png" /></div>
-                <div class="column"><img src="/images/social-proof/Hp Logo.png" /></div>
-                <div class="column"><img src="/images/social-proof/easyJet Logo.png" /></div>
-                <div class="column"><img src="/images/social-proof/CSC Logo.png" /></div>
+            <div class="social-proof">
+                <div id="owl-example" class="owl-carousel">
+                    <div><img src="/images/social-proof-2/atos.png" /></div>
+                    <div><img src="/images/social-proof-2/boeing.png" /></div>
+                    <div><img src="/images/social-proof-2/easyjet.png" /></div>
+                    <div><img src="/images/social-proof-2/hp.png" /></div>
+                    <div><img src="/images/social-proof-2/samsung.png" /></div>
+                    <div><img src="/images/social-proof-2/on24.png" /></div>
+                    <div><img src="/images/social-proof-2/ticketfly.png" /></div>
+                    <div><img src="/images/social-proof-2/verizon.png" /></div>
+                    <div><img src="/images/social-proof-2/nextera.png" /></div>
+                    <div><img src="/images/social-proof-2/fixnetix.png" /></div>
+                    <div><img src="/images/social-proof-2/intel.png" /></div>
+                    <div><img src="/images/social-proof-2/jetstar.png" /></div>
+                    <div><img src="/images/social-proof-2/firstgiving.png" /></div>
+                    <div><img src="/images/social-proof-2/cambridgeuni.png" /></div>
+                </div>
             </div>
         </div>
 
@@ -264,7 +291,7 @@
                     <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra, dolor eget gravida laoreet, augue dui condimentum quam, sed cursus velit risus non erat. Duis gravida erat ac varius tristique. Sed eleifend vel erat et dignissim. Quisque sit amet augue pellentesque, ullamcorper nulla id, auctor metus.</p>
                 </div>
 
-                <div class="eight wide left aligned column feature-responsive">
+                <div class="eight wide left aligned column feature-responsive responsive-align">
                     <a href="/images/specifications-exported-feature.png" data-lightbox="image-1" data-title="Exported feature from Specifications page">
                         <img src="/images/feature-focused-zoomed.png" class="feature-images" />
                     </a>
@@ -277,13 +304,13 @@
                     <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra, dolor eget gravida laoreet, augue dui condimentum quam, sed cursus velit risus non erat. Duis gravida erat ac varius tristique. Sed eleifend vel erat et dignissim. Quisque sit amet augue pellentesque, ullamcorper nulla id, auctor metus.</p>
                 </div>
 
-                <div class="eight wide left aligned column">
+                <div class="eight wide left aligned column responsive-align">
                     <img src="/images/editor-focused.png" class="feature-images"/>
                 </div>
             </div>
 
             <div class="row features-row">
-                <div class="eight wide left aligned column feature-normal">
+                <div class="eight wide left aligned column feature-normal responsive-align">
                     <img src="/images/product1.png" style="height:350px; width:500px; border-radius:12px"/>
                 </div>
 
@@ -292,7 +319,7 @@
                     <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra, dolor eget gravida laoreet, augue dui condimentum quam, sed cursus velit risus non erat. Duis gravida erat ac varius tristique. Sed eleifend vel erat et dignissim. Quisque sit amet augue pellentesque, ullamcorper nulla id, auctor metus.</p>
                 </div>
 
-                <div class="eight wide left aligned column feature-responsive">
+                <div class="eight wide left aligned column feature-responsive responsive-align">
                     <img src="/images/product1.png" style="height:350px; width:500px; border-radius:12px"/>
                 </div>
             </div>
@@ -305,68 +332,94 @@
             </div>
         </div>
     </div>
-    <div class="ui vertical stripe segment" name="pricing" style="padding-top:55px">
-        <div class="ui equal width stackable internally grid">
-            <div class="center aligned row">
-                <div class="center aligned column">
-                    <h4 class="ui horizontal divider header">
-                        <i class="dollar icon"></i>
-                        Pricing
-                    </h4>
-                </div>
-            </div>
 
-            <div class="row features-row" style="padding-right: 50px;padding-left: 110px;">
-                 <div class="six wide center aligned column pricing-row" style="margin-bottom:80px">
-                    <h3><i class="cloud icon"></i> Cloud</h3>
-                    <p class="pricing-description">Behave Pro can be up and running in the Cloud within minutes. It’s easily scalable based on user numbers or geographical location, with uptime availability of 99.99%.</p>
-                </div>
+    <div class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
 
-                <div class="ten wide center aligned column">
+            <h4 class="ui horizontal divider header">
+                <i class="dollar icon"></i> Pricing
+            </h4>
+
+            <div class="row features-row">
+                <div class="sixteen center aligned wide left aligned column">
                     <div class="sliders-value" id="cloud-slider-value"></div>
                     <p><div class="pricing-sliders" id="slider-handles-cloud"></div></p>
                 </div>
+            </div>
+        </div>
 
-                <div class="ten wide center aligned column">
-                    <div class="sliders-value" id="server-slider-value"></div>
-                    <p><div class="pricing-sliders" id="slider-handles-server"></div></p>
+        <div class="ui middle aligned stackable grid container">
+            <div class="row features-row">
+                <div class="eight wide left aligned column">
+                    <div class="ui one cards">
+                        <a class="blue card">
+                            <h2 class="ui header">
+                                <i class="cloud icon"></i>
+                                <div class="content">
+                                    Cloud
+                                </div>
+                            </h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra, dolor eget gravida laoreet, augue dui condimentum quam, sed cursus velit risus non erat. Duis gravida erat ac varius tristique. Sed eleifend vel erat et dignissim. Quisque sit amet augue pellentesque, ullamcorper nulla id, auctor metus.</p>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="six wide center aligned column pricing-row">
-                    <h3><i class="server icon"></i> Server</h3>
-                    <p class="pricing-description">Behave Pro can also run on your own hardware with no requirement for internet access, providing the same great features of Cloud with peace of mind running behind your firewall. </p>
+                <div class="eight wide left aligned column">
+                    <div class="ui one cards">
+                        <a class="blue card">
+                            <h2 class="ui header">
+                                <i class="server icon"></i>
+                                <div class="content">
+                                    Server
+                                </div>
+                            </h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra, dolor eget gravida laoreet, augue dui condimentum quam, sed cursus velit risus non erat. Duis gravida erat ac varius tristique. Sed eleifend vel erat et dignissim. Quisque sit amet augue pellentesque, ullamcorper nulla id, auctor metus.</p>
+                        </a>
+                    </div>
                 </div>
-
-
             </div>
         </div>
     </div>
 
+    <!--<div class="ui vertical stripe segment" name="pricing" style="padding-top:55px">-->
+        <!--<div class="ui middle aligned equal width stackable internally grid">-->
+            <!--<div class="center aligned row">-->
+                <!--<div class="center aligned column">-->
+                    <!--<h4 class="ui horizontal divider header">-->
+                        <!--<i class="dollar icon"></i>-->
+                        <!--Pricing-->
+                    <!--</h4>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="row features-row" style="padding-right: 50px;padding-left: 110px;">-->
+                 <!--<div class="sixteen wide center aligned column" style="margin-bottom:80px">-->
+                     <!--<div class="sliders-value" id="cloud-slider-value"></div>-->
+                     <!--<p><div class="pricing-sliders" id="slider-handles-cloud"></div></p>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="row">-->
+                <!--<div class="column ">test</div>-->
+                <!--<div class="column">test</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
     <div class="ui vertical stripe segment">
         <div class="ui row build-tools">
-            <div class="center aligned column">
-                <h2>Export your user stories to the following languages</h2>
-                <br />
+            <!--<div class="center aligned column">-->
+                <!--<h2>Export your user stories to the following languages</h2>-->
+                <!--<br />-->
+            <!--</div>-->
+            <div id="owl-example2" class="owl-carousel">
+                <img src="/images/build-tool-logos/python.png" />
+                <img src="/images/build-tool-logos/dotnet.png" />
+                <img src="/images/build-tool-logos/maven.png" />
+                <img src="/images/build-tool-logos/nodejs.png" />
+                <img src="/images/build-tool-logos/ruby.png" />
+                <img src="/images/build-tool-logos/gradle.png" />
             </div>
-            <!--<img src="/images/dotnet.png" />-->
-            <!--<img src="/images/gradle.png" />-->
-            <img src="/images/build-tool-logos/python.png" />
-            <img src="/images/build-tool-logos/dotnet.png" />
-            <img src="/images/build-tool-logos/maven.png" />
-            <img src="/images/build-tool-logos/nodejs.png" />
-            <img src="/images/build-tool-logos/ruby.png" />
-            <img src="/images/build-tool-logos/gradle.png" />
-            <!--<img src="/images/nodejs.png" />-->
-            <!--<img src="/images/python.png" class="logo" />-->
-            <!--<img src="/images/ruby.png" class="logo" />-->
-            <!--<img src="/images/social-proof/Jetstar Logo.png" />-->
-            <!--<img src="/images/social-proof/Samsung Accelerator Logo.png" />-->
-            <!--<img src="/images/social-proof/NextEra Energy Logo.png" />-->
-            <!--<img src="/images/social-proof/ON24 Logo.png" />-->
-            <!--<img src="/images/social-proof/TicketFly Logo.png" />-->
-            <!--<img src="/images/social-proof/Verizon Logo.png" />-->
-            <!--<img src="/images/social-proof/Unversity of Cambridge Logo.png" />-->
-
         </div>
     </div>
     <div class="ui vertical stripe segment">
@@ -492,20 +545,6 @@
         </div>
         </div>
 
-    <!--<div class="ui vertical stripe segment">-->
-        <!--<div class="ui text container">-->
-            <!--<h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>-->
-            <!--<p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>-->
-            <!--<a class="ui large button">Read More</a>-->
-            <!--<h4 class="ui horizontal header divider">-->
-                <!--<a href="#">Case Studies</a>-->
-            <!--</h4>-->
-            <!--<h3 class="ui header">Did We Tell You About Our Bananas?</h3>-->
-            <!--<p>Yes I know you probably disregarded the earlier boasts as non-sequitor filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>-->
-            <!--<a class="ui large button">I'm Still Quite Interested</a>-->
-        <!--</div>-->
-    <!--</div>-->
-
 
     <div class="ui inverted vertical footer segment">
         <div class="ui container">
@@ -577,53 +616,10 @@
         '500': 500,
         '2000': 1000
     };
-    var serverPriceMap = {
-        '10': 100,
-        '25': 600,
-        '50': 1100,
-        '100': 2000,
-        '500': 6000,
-        '2000': 8000,
-        '10000': 10000
-    };
 
-    cloudSlider.noUiSlider.on('update', function( values, handle ) {
-        cloudSliderValue.innerHTML = values[handle].split('.')[0] + ' users\n$' + cloudPriceMap[values[handle].split('.')[0]]
-    });
-
-    noUiSlider.create(serverSlider, {
-        start: 10,
-        snap: true,
-        range: {
-            'min': [10],
-            '20%': [25],
-            '40%': [50],
-            '60%': [100],
-            '80%': [500],
-            '100%': [2000],
-            'max': [10000]
-        },
-        step: 10,
-        connect: 'lower',
-        pips: {
-            mode: 'positions',
-            values: [0, 10, 25, 30, 40, 50, 60, 70, 80, 90, 100],
-            density: 20,
-            stepped: true,
-            thousand: ', ',
-            format: wNumb({
-                postfix: 'users'
-            })
-        }
-    });
-
-    var serverSliderValue = document.getElementById('server-slider-value');
-
-    serverSlider.noUiSlider.on('update', function( values, handle ) {
-        serverSliderValue.innerHTML = values[handle].split('.')[0] + ' users\n$' + serverPriceMap[values[handle].split('.')[0]]
-    });
 </script>
 <script src="/lightbox/js/lightbox.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
 </body>
 
 </html>
