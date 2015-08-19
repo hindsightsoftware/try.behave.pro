@@ -97,10 +97,6 @@
     padding: 0px 80px !important;
 }
 
-.sliders-value {
-    font-size:2em;
-}
-
 .pricing-description {
     text-align: justify;
     text-justify: inter-word;
@@ -141,4 +137,8 @@
 .card {
     padding: 30px !important;
     color: #000;
+}
+
+.noUi-connect {
+    background-color: #2185d0 !important;
 }

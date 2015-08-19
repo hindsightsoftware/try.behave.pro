@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/button.css">
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/list.css">
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/card.css">
+    <link rel="stylesheet" type="text/css" href="/semantic/dist/components/label.css">
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/icon.css">
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/sidebar.css">
     <link rel="stylesheet" type="text/css" href="/semantic/dist/components/transition.css">
@@ -148,11 +149,6 @@
                         items: 4,
                         pagination: false
                     });
-                    $("#owl-example2").owlCarousel({
-                        autoPlay: 5000,
-                        items: 4,
-                        pagination: false
-                    });
 
                     // fix menu when passed
                     $('.masthead')
@@ -189,8 +185,7 @@
                         });
                     });
 
-                })
-        ;
+                });
     </script>
 </head>
 <body>
@@ -333,17 +328,36 @@
         </div>
     </div>
 
-    <div class="ui vertical stripe segment">
+    <div class="ui vertical stripe segment" name="pricing">
         <div class="ui middle aligned stackable grid container">
 
             <h4 class="ui horizontal divider header">
                 <i class="dollar icon"></i> Pricing
             </h4>
 
-            <div class="row features-row">
-                <div class="sixteen center aligned wide left aligned column">
-                    <div class="sliders-value" id="cloud-slider-value"></div>
+            <div class="row features-row" style="margin: 0 !important">
+                <div class="sixteen wide left aligned column"  id="cloud-pricing">
+                    <h3 class="ui header" style="width: 85%;margin: 0 auto;">
+                        <div class="content">
+                            <span id="cloud-slider-users"></span>
+                        </div>
+                        <div class="ui blue label">
+                            <i class="dollar icon"></i> <span class="sliders-value" id="cloud-slider-value"></span>/m
+                        </div>
+                    </h3>
                     <p><div class="pricing-sliders" id="slider-handles-cloud"></div></p>
+                </div>
+
+                <div class="sixteen wide left aligned column"  id="server-pricing" style="display:none;">
+                    <h3 class="ui header" style="width: 85%;margin: 0 auto;">
+                        <div class="content">
+                            <span id="server-slider-users"></span>
+                        </div>
+                        <div class="ui blue label">
+                            <i class="dollar icon"></i> <span class="sliders-value" id="server-slider-value"></span>/yr
+                        </div>
+                    </h3>
+                    <p><div class="pricing-sliders" id="slider-handles-server"></div></p>
                 </div>
             </div>
         </div>
@@ -352,7 +366,7 @@
             <div class="row features-row">
                 <div class="eight wide left aligned column">
                     <div class="ui one cards">
-                        <a class="blue card">
+                        <a class="blue card" name="pricing-cloud" onclick="pricingSwitcher(this.name)">
                             <h2 class="ui header">
                                 <i class="cloud icon"></i>
                                 <div class="content">
@@ -366,7 +380,7 @@
 
                 <div class="eight wide left aligned column">
                     <div class="ui one cards">
-                        <a class="blue card">
+                        <a class="blue card" name="pricing-server" onclick="pricingSwitcher(this.name)">
                             <h2 class="ui header">
                                 <i class="server icon"></i>
                                 <div class="content">
@@ -377,48 +391,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!--<div class="ui vertical stripe segment" name="pricing" style="padding-top:55px">-->
-        <!--<div class="ui middle aligned equal width stackable internally grid">-->
-            <!--<div class="center aligned row">-->
-                <!--<div class="center aligned column">-->
-                    <!--<h4 class="ui horizontal divider header">-->
-                        <!--<i class="dollar icon"></i>-->
-                        <!--Pricing-->
-                    <!--</h4>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="row features-row" style="padding-right: 50px;padding-left: 110px;">-->
-                 <!--<div class="sixteen wide center aligned column" style="margin-bottom:80px">-->
-                     <!--<div class="sliders-value" id="cloud-slider-value"></div>-->
-                     <!--<p><div class="pricing-sliders" id="slider-handles-cloud"></div></p>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="row">-->
-                <!--<div class="column ">test</div>-->
-                <!--<div class="column">test</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <div class="ui vertical stripe segment">
-        <div class="ui row build-tools">
-            <!--<div class="center aligned column">-->
-                <!--<h2>Export your user stories to the following languages</h2>-->
-                <!--<br />-->
-            <!--</div>-->
-            <div id="owl-example2" class="owl-carousel">
-                <img src="/images/build-tool-logos/python.png" />
-                <img src="/images/build-tool-logos/dotnet.png" />
-                <img src="/images/build-tool-logos/maven.png" />
-                <img src="/images/build-tool-logos/nodejs.png" />
-                <img src="/images/build-tool-logos/ruby.png" />
-                <img src="/images/build-tool-logos/gradle.png" />
             </div>
         </div>
     </div>
@@ -577,7 +549,6 @@
 </div>
 <script>
     var cloudSlider = document.getElementById('slider-handles-cloud');
-    var serverSlider = document.getElementById('slider-handles-server');
 
     noUiSlider.create(cloudSlider, {
         start: 10,
@@ -598,14 +569,13 @@
             values: [0, 10, 25, 30, 40, 50, 60, 70, 80, 90, 100],
             density: 20,
             stepped: true,
-            thousand: ', ',
-            format: wNumb({
-                postfix: 'users'
-            })
+            thousand: ', '
         }
     });
 
+
     var cloudSliderValue = document.getElementById('cloud-slider-value');
+    var cloudSliderUsers = document.getElementById('cloud-slider-users');
 
     var cloudPriceMap = {
         '10': 10,
@@ -616,6 +586,81 @@
         '500': 500,
         '2000': 1000
     };
+
+    cloudSlider.noUiSlider.on('update', function( values, handle ) {
+        cloudSliderUsers.innerHTML = values[handle].split('.')[0] + ' users';
+        cloudSliderValue.innerHTML = cloudPriceMap[values[handle].split('.')[0]]
+    });
+
+    var serverSlider = document.getElementById('slider-handles-server');
+
+    noUiSlider.create(serverSlider, {
+        start: 10,
+        snap: true,
+        range: {
+            'min': [10],
+            '15%': [25],
+            '35%': [50],
+            '55%': [100],
+            '70%': [500],
+            '80%': [2000],
+            '90%': [10000],
+            'max': [10001]
+        },
+        step: 10,
+        connect: 'lower',
+        pips: {
+            mode: 'positions',
+            values: [0, 10, 25, 30, 40, 50, 60, 70, 80, 90, 100],
+            density: 20,
+            stepped: true,
+            thousand: ', ',
+            format: {to: updatePips}
+        }
+    });
+
+    function updatePips( value, type ){
+
+        if (value == 10001) {
+            value = "10000+"
+        }
+        return value;
+    }
+
+    var serverSliderValue = document.getElementById('server-slider-value');
+    var serverSliderUsers = document.getElementById('server-slider-users');
+
+    var serverPriceMap = {
+        '10': 100,
+        '25': 600,
+        '50': 1100,
+        '100': 2000,
+        '500': 6000,
+        '2000': 8000,
+        '10000': 10000,
+        '10001': 120000
+    };
+
+    serverSlider.noUiSlider.on('update', function( values, handle ) {
+        var users = values[handle].split('.')[0];
+        if (users == 10001) {
+            users = '10000+';
+        }
+        serverSliderUsers.innerHTML = users + ' users';
+        serverSliderValue.innerHTML = serverPriceMap[values[handle].split('.')[0]];
+    });
+
+
+
+    function pricingSwitcher(name) {
+        if (name == 'pricing-cloud') {
+            $('#server-pricing').hide();
+            $('#cloud-pricing').show();
+        } else {
+            $('#cloud-pricing').hide();
+            $('#server-pricing').show();
+        }
+    }
 
 </script>
 <script src="/lightbox/js/lightbox.js"></script>
