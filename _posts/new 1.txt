@@ -1,0 +1,16 @@
+| Attribute   | Required | Notes                                          |
+| ------------| :-------:| ---------------------------------------------- |
+| base        | true     | The plugin to launch this browser; WebDriver   |
+| browserName | true     | The name of the browser you require, should be one of {android|chrome|firefox|htmlunit|internet explorer|iPhone|iPad|opera|safari}  |
+| config      | false    | The location of the remote WebDriver or Selenium Grid 2 instance. Default value of 127.0.0.1 on port 4444 |
+| platform    | false    |    Operating System |
+| version     | false    |    Browser version |
+
+
+| Attribute   | Required Notes |                                                                                                                                           |
+|-------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| base        | true           | The plugin to launch this browser; WebDriver                                                                                              |
+| browserName | true           | The name of the browser you require, should be one of {android chrome, firefox, htmlunit, internet explorer, iPhone, iPad, opera, safari} |
+| config      | false          | The location of the remote WebDriver or Selinium Grid 2 instance. Default value of 127.0.0.1 on port 4444                                 |
+| platform    | false          | Operating System                                                                                                                          |
+| version     | false          | Browser Version                                                                                                                           |
