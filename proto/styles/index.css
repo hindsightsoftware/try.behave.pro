@@ -175,3 +175,7 @@
 .noUi-connect {
     background-color: #2185d0 !important;
 }
+
+.more-features .image {
+    width: 66px !important;
+}
