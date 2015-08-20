@@ -1,17 +1,47 @@
 .welcome-gif {
-    margin-top:50px;
-    border-radius:5px;
-    position: absolute;
     left: 15%;
-    border:solid 2px #868686;
+    border:solid 2px #c5c5c5;
+}
+
+.fake-browser-ui {
+    padding: 20px 0 0;
+    border-radius: 3px;
+    border-bottom: 2px solid #ccc;
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    margin-top: 50px;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.fake-browser-ui .frame {
+    display: block;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    left: 1px;
+}
+
+.fake-browser-ui span {
+    height: 10px;
+    width: 10px;
+    border-radius: 8px;
+    background-color: #eee;
+    border: 1px solid #c5c5c5;
+    float: left;
+    margin: 0 0 0 4px;
 }
 
 @media only screen and (max-width: 767px) {
-    .welcome-gif {
+    .fake-browser-ui {
         position: relative;
         max-width: 80%;
         left: 0px;
         margin-top: 0px;
+    }
+    .fake-browser-ui img {
+        width: 100%;
     }
 }
 
@@ -41,10 +71,13 @@
 }
 
 @media only screen and (max-width: 767px) {
+
     .social-proof {
         position: relative;
-        top: 100% !important;
-        bottom: auto !important;
+    }
+
+    .ui.inverted.vertical.masthead.center.aligned.segment {
+        min-height: unset !important;
     }
 
     .ui.container {
