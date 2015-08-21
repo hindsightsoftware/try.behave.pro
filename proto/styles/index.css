@@ -187,3 +187,8 @@
     margin:0px !important;
     padding-top:6em !important;
 }
+
+.footer a {
+    text-decoration:none;
+    color:white;
+}
