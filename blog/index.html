@@ -1,0 +1,45 @@
+---
+layout: blog
+permalink: /blog/
+asset: blog
+---
+
+
+
+
+<div class="ui vertical segment white">
+    <div class="ui container">
+
+        {% for post in paginator.posts %}
+        {% include blog-post-excerpt.html %}
+        {% endfor %}
+
+        {% if paginator.total_pages > 1 %}
+        <div class="pagination">
+            {% if paginator.previous_page %}
+            <a rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+            {% else %}
+            <span>&laquo; Prev</span>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            <em>{{ page }}</em>
+            {% elsif page == 1 %}
+            <a href="{{ '/archives' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+            {% else %}
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+            <a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+            {% else %}
+            <span>Next &raquo;</span>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<p class="rss-subscribe">subscribe <a href="{{ "/blog/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

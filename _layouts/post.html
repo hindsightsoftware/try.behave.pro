@@ -2,7 +2,7 @@
 layout: blog
 ---
 {% assign author = site.authors[page.author] %}
-<article class="post">
+<article class="ui container post">
 
   <header class="post-header">
       <img class="post-image" src="//dc8hdnsmzapvm.cloudfront.net/assets/images/blog/categories/advanced-seo.png?74da3a3">
@@ -34,16 +34,16 @@ layout: blog
             {% endfor %}
         </div>
         <form action="//storyiq.us2.list-manage.com/subscribe/post?u=1161fa9d724126772d2e04bc1&amp;id=7fdf7fd767" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="signup-form validate" target="_blank" novalidate>
-            <p>Receive tips straight to your inbox</p>
+            <p>Receive tips straight to your inbox </p>
             <p>
                 <label for="signup_email">Email Address</label>
-                <input type="email" name="EMAIL" id="signup_email" placeholder="Email Address" value="" class="error">
+                <div class="ui input"><input type="email" name="EMAIL" id="signup_email" placeholder="Email Address" value="" class="error" /></div>
                 <input type="hidden" value="1" name="group[20577][1]" id="mce-group[20577]-20577-0"/>
                 <input type="hidden" value="4" name="group[20577][4]" id="mce-group[20577]-20577-2"/>
                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 <div style="position: absolute; left: -5000px;"><input type="text" name="b_1161fa9d724126772d2e04bc1_7fdf7fd767" tabindex="-1" value=""></div>
             </p>
-            <p class="button"><input type="submit" name="" value="Subscribe" class="on"></p>
+            <p class="button"><input type="submit" name="" value="Subscribe" class="ui button"></p>
             <p class="response" id="mce-success-response" style="display:none"></p>
             <p class="response" id="mce-error-response" style="display:none"></p>
         </form>

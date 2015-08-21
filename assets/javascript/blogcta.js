@@ -7,11 +7,15 @@ function shouldDisplay() {
   return (docViewTop >= 75)
 }
 
+console.log('run1')
 if ($('.share-widget-container-fixed')) {
+  console.log('run2')
 
   var displayed = false;
 
   $(window).scroll(function () {
+    console.log('scroll')
+    console.log(shouldDisplay())
     if (shouldDisplay()) {
       //slide CTA onto screen
       if (!displayed) {

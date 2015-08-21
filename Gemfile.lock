@@ -111,6 +111,3 @@ DEPENDENCIES
   jemoji (~> 0.5.0)
   rouge (~> 1.9.1)
   s3_website (~> 2.11.0)
-
-BUNDLED WITH
-   1.10.5
