@@ -339,7 +339,9 @@
                 <i class="dollar icon"></i> Pricing
             </h4>
 
-            <div class="row features-row slider-container" style="margin: 20px 0px !important; opacity: 0.2">
+            <div class="row centered aligned"><div class="ui basic segment CTA-instruction">Select your product type below</div></div>
+
+            <div class="row features-row slider-container" style="margin: -20px 0px 20px !important; opacity: 0.2">
                 <div class="sixteen wide left aligned column"  id="cloud-pricing">
                     <h3 class="ui header" style="width: 85%;margin: 0 auto;">
                         <div class="content">
@@ -378,7 +380,7 @@
                                 </div>
                             </h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra, dolor eget gravida laoreet, augue dui condimentum quam, sed cursus velit risus non erat. Duis gravida erat ac varius tristique. Sed eleifend vel erat et dignissim. Quisque sit amet augue pellentesque, ullamcorper nulla id, auctor metus.</p>
-                        </a>
+                            <button onclick="handleCloudAction()" disabled class="ui basic button action-button">Evaluate now</button></a>
                     </div>
                 </div>
 
@@ -392,6 +394,7 @@
                                 </div>
                             </h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra, dolor eget gravida laoreet, augue dui condimentum quam, sed cursus velit risus non erat. Duis gravida erat ac varius tristique. Sed eleifend vel erat et dignissim. Quisque sit amet augue pellentesque, ullamcorper nulla id, auctor metus.</p>
+                            <button onclick="handleServerAction()" disabled class="ui basic button action-button">Contact us</button>
                         </a>
                     </div>
                 </div>
@@ -749,6 +752,8 @@
 
 
     function pricingSwitcher(name) {
+        $('.CTA-instruction').fadeTo('fast', 0);
+
         if ($(cloudSlider).attr('disabled') == 'disabled') {
             cloudSlider.removeAttribute('disabled');
         }
@@ -763,17 +768,32 @@
         hasRun = true;
         $('.slider-container').fadeTo('fast', 1);
         if (name == 'pricing-cloud') {
+            $('#pricing-cloud button').removeAttr('disabled');
+            $('#pricing-server button').attr('disabled', true);
+
+
             $('#server-pricing').hide();
             $('#cloud-pricing').show();
 
-            $('#pricing-cloud').fadeTo('fast', 1);
-            $('#pricing-server').fadeTo('fast', 0.2);
+            $('#pricing-cloud').fadeTo('fast', 1, function() {
+                $(this).addClass('active');
+            });
+            $('#pricing-server').fadeTo('fast', 0.2, function() {
+                $(this).removeClass('active');
+            });
         } else {
+            $('#pricing-server button').removeAttr('disabled');
+            $('#pricing-cloud button').attr('disabled', true);
+
             $('#cloud-pricing').hide();
             $('#server-pricing').show();
 
-            $('#pricing-server').fadeTo('fast', 1);
-            $('#pricing-cloud').fadeTo('fast', 0.2);
+            $('#pricing-server').fadeTo('fast', 1, function() {
+                $(this).addClass('active');
+            });
+            $('#pricing-cloud').fadeTo('fast', 0.2, function() {
+                $(this).removeClass('active');
+            });
         }
     }
 
@@ -828,6 +848,15 @@
 
     $(document).on('scroll', handlePulse);
     resetValues(0, 0);
+
+
+    function handleCloudAction() {
+        window.open('https://marketplace.atlassian.com/plugins/pro.behave.hosted#cloud');
+    }
+
+    function handleServerAction() {
+        window.open('/contact')
+    }
 </script>
 <script src="/lightbox/js/lightbox.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>

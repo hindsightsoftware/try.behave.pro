@@ -192,3 +192,11 @@
     text-decoration:none;
     color:white;
 }
+
+#pricing-cloud .action-button, #pricing-server .action-button {
+    opacity:0.2;
+}
+
+#pricing-cloud.active .action-button, #pricing-server.active .action-button {
+    opacity:1;
+}
