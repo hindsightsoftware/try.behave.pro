@@ -10,6 +10,12 @@ asset: blog
 <div class="ui vertical segment white">
     <div class="ui container">
 
+        <div style="text-align: right">
+            {% for category in site.categories %}
+            <div class="category"><a href="#">{{ category | first }}</a></div>
+            {% endfor %}
+        </div>
+
         {% for post in paginator.posts %}
         {% include blog-post-excerpt.html %}
         {% endfor %}
