@@ -12,7 +12,7 @@ asset: blog
 
         <div style="text-align: right">
             {% for category in site.categories %}
-            <div class="category"><a href="#">{{ category | first }}</a></div>
+            <div class="category"><a href="/blog/{{ category | first }}">{{ category | first }}</a></div>
             {% endfor %}
         </div>
 
