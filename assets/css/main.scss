@@ -52,3 +52,11 @@ $on-laptop:        800px;
         "blog",
         "syntax-highlighting"
 ;
+
+.category {
+  display: inline-block;
+  padding-left: 15px;
+}
+.category::first-letter {
+  //text-transform: uppercase !important;
+}
