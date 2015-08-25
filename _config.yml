@@ -33,10 +33,12 @@ authors:
     author_image: "/assets/images/authors/gmccreadie.png"
     email: george.mccreadie@hindsightsoftware.co.uk
 
-paginate:	5
+paginate: 5
 
 permalink:     /blog/:categories/:year/:y_day/:title.html
-paginate_path: /blog/page:num
+paginate_path: "/blog/page:num"
+
+
 
 # social icons and sharing options
 social:
