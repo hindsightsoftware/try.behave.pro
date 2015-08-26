@@ -176,8 +176,12 @@
     background-color: #2185d0 !important;
 }
 
-.more-features .image {
-    width: 66px !important;
+.build-logo {
+    max-width: 66px !important;
+    width: auto !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .menu-anchor {
     padding-top:20px !important;

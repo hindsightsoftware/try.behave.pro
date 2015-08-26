@@ -43,6 +43,10 @@
     $(document).ready(function() {
                 $('.ui.dropdown').first().dropdown();
 
+        $('.toc.item').click(function() {
+            $('.ui.sidebar').sidebar('toggle');
+        });
+
                 // fix menu when passed
                 $('.masthead')
                         .visibility({
@@ -62,6 +66,7 @@
                             var target = $(this.hash);
                             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                             if (target.length) {
+                                $('.ui.sidebar').sidebar('hide');
                                 $('html,body').animate({
                                     scrollTop: target.offset().top
                                 }, 800);
