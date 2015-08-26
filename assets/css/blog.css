@@ -21,3 +21,10 @@ body {
 .post img {
     width: 100%;
 }
+
+.pagination {
+    float: left;
+}
+.rss-subscribe {
+    float: right;
+}

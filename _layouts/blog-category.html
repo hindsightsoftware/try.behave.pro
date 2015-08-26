@@ -8,24 +8,17 @@
     {% include blog-header.html %}
 
     <div class="ui vertical segment white">
-        <main role="main" class="page-content">
-            <div class="wrapper">
-                <div class="home">
+        <div class="ui container">
+            <h1 class="page-heading">{{ page.type }}</h1>
 
-                    <h1 class="page-heading">Posts</h1>
+            {{ content }}
 
-                    {{ content }}
+            {% for post in site.categories.[page.type] %}
+            {% include blog-post-excerpt.html %}
+            {% endfor %}
 
-                    {% for post in site.categories.[page.type] %}
-                    {% include blog-post-excerpt.html %}
-                    {% endfor %}
-
-                    <p class="rss-subscribe">subscribe <a href="{{ "/blog/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-                </div>
-
-            </div>
-        </main>
+            <p class="rss-subscribe">subscribe <a href="{{ "/blog/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        </div>
     </div>
 
     {% include blog-footer.html %}

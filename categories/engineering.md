@@ -5,5 +5,3 @@ type: engineering
 permalink: /blog/engineering/
 asset: blog
 ---
-
-Category description content here

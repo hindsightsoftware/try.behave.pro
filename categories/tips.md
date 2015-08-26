@@ -5,5 +5,3 @@ type: tips
 permalink: /blog/tips/
 asset: blog
 ---
-
-Category description content here

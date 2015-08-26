@@ -5,5 +5,3 @@ type: updates
 permalink: /blog/updates/
 asset: blog
 ---
-
-Category description content here
