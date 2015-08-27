@@ -7,14 +7,14 @@ function shouldDisplay() {
   return (docViewTop >= 75)
 }
 
-if ($('.share-widget-container-fixed')) {
+if ($('.share-segment')) {
   var displayed = false;
 
   $(window).scroll(function () {
     if (shouldDisplay()) {
       //slide CTA onto screen
       if (!displayed) {
-        $('.share-widget-container-fixed').animate({
+        $('.share-segment').animate({
           bottom: 0
         }, "fast");
         $('.product-blog-cta-container').animate({
@@ -24,7 +24,7 @@ if ($('.share-widget-container-fixed')) {
         displayed = true;
       }
     } else if (displayed) {
-      $('.share-widget-container-fixed').animate({
+      $('.share-segment').animate({
         bottom: -200
       }, "fast");
       $('.product-blog-cta-container').animate({
