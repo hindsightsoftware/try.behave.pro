@@ -28,3 +28,15 @@ body {
 .rss-subscribe {
     float: right;
 }
+
+.blog-header {
+    height:60px;
+    padding-top: 3px !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .blog-header {
+        height:50px;
+        padding-top: 0px;
+    }
+}

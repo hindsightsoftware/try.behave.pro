@@ -10,9 +10,15 @@ asset: blog
     <div class="ui container">
 
         <div style="text-align: right">
-            {% for category in site.categories %}
-            <div class="category"><a href="/blog/{{ category | first }}">{{ category | first }}</a></div>
-            {% endfor %}
+            <div class="ui dropdown item">
+                Category
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    {% for category in site.categories %}
+                    <a class="item" href="/blog/{{ category | first }}">{{ category | first }}</a>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
 
         {% for post in paginator.posts %}

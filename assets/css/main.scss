@@ -60,3 +60,9 @@ $on-laptop:        800px;
 .category::first-letter {
   //text-transform: uppercase !important;
 }
+
+@media only screen and (max-width: 767px) {
+  .product-blog-cta-container, .share-widget-container-fixed {
+    display: none !important;
+  }
+}

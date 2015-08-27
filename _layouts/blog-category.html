@@ -9,7 +9,19 @@
 
     <div class="ui vertical segment white">
         <div class="ui container">
-            <h1 class="page-heading">{{ page.type }}</h1>
+            <div style="text-align: right">
+                <div class="ui dropdown item">
+                    {{ page.type }}
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        {% for category in site.categories %}
+                            {% unless category contains page.type %}
+                                <a class="item" href="/blog/{{ category | first }}">{{ category | first }}</a>
+                            {% endunless %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
 
             {{ content }}
 

@@ -10,10 +10,18 @@
 
 {% if page.asset == 'index' %}
 <script src="/assets/javascript/index.js"></script>
-{% endif %}`
+{% endif %}
 
 <script type="text/javascript">
     $(document).ready(function(){
+        if (window.location.hash) {
+            var element = window.location.hash.split('#')[1];
+            if ($('[name="' + element + '"]').length) {
+                $('html, body').animate({
+                    scrollTop: $('[name="' + element + '"]').offset().top
+                }, 800);
+            }
+        }
         $.cookieBar({
             fixed: true,
             acceptOnScroll: 200,
@@ -41,45 +49,45 @@
 <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <script>
     $(document).ready(function() {
-                $('.ui.dropdown').first().dropdown();
+
+        $('.ui.dropdown').dropdown();
 
         $('.toc.item').click(function() {
             $('.ui.sidebar').sidebar('toggle');
         });
-
-                // fix menu when passed
-                $('.masthead')
-                        .visibility({
-                            once: false,
-                            onBottomPassed: function() {
-                                $('.fixed.menu').transition('fade in');
-                            },
-                            onBottomPassedReverse: function() {
-                                $('.fixed.menu').transition('fade out');
-                            }
-                        });
-
-                $(function() {
-                    $('a[href*=#]:not([href=#])').click(function() {
-                        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
-                            var target = $(this.hash);
-                            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                            if (target.length) {
-                                $('.ui.sidebar').sidebar('hide');
-                                $('html,body').animate({
-                                    scrollTop: target.offset().top
-                                }, 800);
-                                return false;
-                            }
-                        }
-                    });
+        // fix menu when passed
+        $('.masthead')
+                .visibility({
+                    once: false,
+                    onBottomPassed: function() {
+                        $('.fixed.menu').transition('fade in');
+                    },
+                    onBottomPassedReverse: function() {
+                        $('.fixed.menu').transition('fade out');
+                    }
                 });
 
-                $("#owl-example").owlCarousel({
-                    autoPlay: 5000,
-                    items: 4,
-                    pagination: false
-                });
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('.ui.sidebar').sidebar('hide');
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 800);
+                        return false;
+                    }
+                }
             });
+        });
+
+        $("#owl-example").owlCarousel({
+            autoPlay: 5000,
+            items: 4,
+            pagination: false
+        });
+    });
 </script>

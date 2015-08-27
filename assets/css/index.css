@@ -52,7 +52,7 @@
     bottom:0px;
     background-color:#fff;
     color:black;
-    height: auto;
+    height: 150px;
     overflow: hidden;
 }
 
@@ -160,6 +160,10 @@
 
     .feature-responsive {
         display:block !important;
+    }
+
+    .product-blog-cta-container {
+        display: none !important;
     }
 }
 
