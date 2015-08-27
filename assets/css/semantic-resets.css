@@ -86,3 +86,7 @@
         font-size: 1.5em;
     }
 }
+
+.ui.blue.button:hover {
+    background-color: #17B6E9;
+}
