@@ -176,6 +176,10 @@
     color: #000;
 }
 
+a.card:hover {
+    text-decoration:none;
+}
+
 .noUi-connect {
     background-color: #2185d0 !important;
 }
@@ -199,4 +203,12 @@
 .footer a {
     text-decoration:none;
     color:white;
+}
+
+#pricing-cloud .action-button, #pricing-server .action-button {
+    opacity:0.2;
+}
+
+#pricing-cloud.active .action-button, #pricing-server.active .action-button {
+    opacity:1;
 }

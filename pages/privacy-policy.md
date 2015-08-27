@@ -2,6 +2,7 @@
 layout: page
 title: Privacy Policy
 permalink: /legal/privacy-policy/
+asset: page
 ---
 
 We at Hindsight (Hindsight Software Ltd, and our affiliates) are committed to protecting your privacy. This Privacy

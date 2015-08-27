@@ -52,12 +52,12 @@ noUiSlider.create(serverSlider, {
     snap: true,
     range: {
         'min': [10],
-        '16.66%': [25],
-        '33.32%': [50],
-        '49.98%': [100],
-        '66.64%': [500],
-        '83.3%': [2000],
-        '99.9%': [10000],
+        '14.28%': [25],
+        '28.57%': [50],
+        '42.85%': [100],
+        '57.13%': [500],
+        '71.41%': [2000],
+        '85.69%': [10000],
         'max': [10001]
     },
     step: 10,
@@ -91,7 +91,7 @@ var serverPriceMap = {
     '500': 6000,
     '2000': 8000,
     '10000': 10000,
-    '10001': 120000
+    '10001': 12000
 };
 
 serverSlider.noUiSlider.on('update', function( values, handle ) {
@@ -121,17 +121,33 @@ function pricingSwitcher(name) {
     hasRun = true;
     $('.slider-container').fadeTo('fast', 1);
     if (name == 'pricing-cloud') {
+        $('#pricing-cloud button').removeAttr('disabled');
+        $('#pricing-server button').attr('disabled', true);
+
         $('#server-pricing').hide();
         $('#cloud-pricing').show();
 
-        $('#pricing-cloud').fadeTo('fast', 1);
-        $('#pricing-server').fadeTo('fast', 0.2);
+        $('#pricing-cloud').fadeTo('fast', 1, function() {
+            $(this).addClass('active');
+        });
+
+        $('#pricing-server').fadeTo('fast', 0.2, function() {
+            $(this).removeClass('active');
+        });
     } else {
+        $('#pricing-server button').removeAttr('disabled');
+        $('#pricing-cloud button').attr('disabled', true);
+
         $('#cloud-pricing').hide();
         $('#server-pricing').show();
 
-        $('#pricing-server').fadeTo('fast', 1);
-        $('#pricing-cloud').fadeTo('fast', 0.2);
+        $('#pricing-server').fadeTo('fast', 1, function() {
+            $(this).addClass('active');
+        });
+
+        $('#pricing-cloud').fadeTo('fast', 0.2, function() {
+            $(this).removeClass('active');
+        });
     }
 }
 
@@ -186,3 +202,10 @@ function activatePulse() {
 
 $(document).on('scroll', handlePulse);
 resetValues(0, 0);
+
+function handleCloudAction() {
+    window.open('https://marketplace.atlassian.com/plugins/pro.behave.hosted#cloud');
+}
+function handleServerAction() {
+    window.open('/products/behave-pro-server/')
+}
