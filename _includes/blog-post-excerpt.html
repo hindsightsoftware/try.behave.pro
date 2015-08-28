@@ -1,4 +1,23 @@
-<article class="ui segment" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+{% if site.[page.type] %}
+{% assign colour = site.[page.type].colour %}
+{% elsif post.colour %}
+{% assign colour = post.colour %}
+{% else %}
+{% assign cat = post.categories | first %}
+{% assign colour = site.[cat].colour %}
+{% endif %}
+<article class="ui basic segment excerpt" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+    <a href="{{ post.url }}" itemprop="url">
+        <div class="image" style="{{ 'background-color:' | append: colour }}">
+            {% if post.image %}
+            <img src="{{ post.image }}" />
+            {% elsif site.[page.type].image %}
+            <img src="{{ site.[page.type].image }}" />
+            {% else %}
+            <img src="{{ site.[cat].image }}" />
+            {% endif %}
+        </div>
+    </a>
     <h2 class="ui header" itemprop="name">
         <div class="content">
             <a href="{{ post.url }}" itemprop="url">{{ post.title }}</a>

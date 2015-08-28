@@ -3,10 +3,17 @@ layout: blog
 asset: blog
 ---
 {% assign author = site.authors[page.author] %}
+{% assign cat = page.categories | first %}
 <div class="ui vertical segment white">
 <article class="ui container post">
   <header class="post-header">
-      <img class="post-image" src="//dc8hdnsmzapvm.cloudfront.net/assets/images/blog/categories/advanced-seo.png?74da3a3">
+      <div class="post-image" style="{{'background-color: ' | append: site.[cat].colour}}">
+          {% if page.image %}
+          <img src="{{ page.image }}" />
+          {% else %}
+          <img src="{{ site.[cat].image }}" />
+          {% endif %}
+      </div>
       <section class="author">
               {% if author.author_image %}
               <img src="{{ author.author_image }}" alt="{{ author.display_name }}"/>

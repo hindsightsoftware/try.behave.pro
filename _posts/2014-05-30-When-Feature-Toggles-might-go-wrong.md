@@ -5,6 +5,7 @@ author: aparkinson
 date: 2014-05-30
 layout: post
 categories: engineering
+image: //dc8hdnsmzapvm.cloudfront.net/assets/images/blog/categories/advanced-seo.png?74da3a3
 ---
 
 This post could have two different titles "Don’t forget Technical Support in DevOps" and "When  Feature toggles might go wrong". Our failure with [Feature Toggles](http://martinfowler.com/bliki/FeatureToggle.html) is a direct example of not considering Technical Support as a concern when developing software and it’s ultimate impact on the business model.
