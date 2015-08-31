@@ -212,3 +212,7 @@ a.card:hover {
 #pricing-cloud.active .action-button, #pricing-server.active .action-button {
     opacity:1;
 }
+
+.item .content {
+    margin-left: 10px !important;
+}
