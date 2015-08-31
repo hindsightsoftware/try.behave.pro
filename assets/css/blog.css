@@ -47,6 +47,9 @@ body {
     height:64px;
     padding-top: 3px !important;
 }
+.blog-header .right.menu a.item {
+    top: -2px;
+}
 
 @media only screen and (max-width: 767px) {
     .blog-header {

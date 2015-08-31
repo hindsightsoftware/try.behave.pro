@@ -216,3 +216,7 @@ a.card:hover {
 .item .content {
     margin-left: 10px !important;
 }
+
+.right.menu a.item {
+    top: -2px;
+}
