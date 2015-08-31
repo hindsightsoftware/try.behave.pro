@@ -1,10 +1,11 @@
 {% if site.[page.type] %}
 {% assign colour = site.[page.type].colour %}
-{% elsif post.colour %}
-{% assign colour = post.colour %}
 {% else %}
 {% assign cat = post.categories | first %}
 {% assign colour = site.[cat].colour %}
+{% endif %}
+{% if post.colour %}
+{% assign colour = post.colour %}
 {% endif %}
 <article class="ui basic segment excerpt" itemscope itemtype="http://schema.org/BlogPosting" role="article">
     <a href="{{ post.url }}" itemprop="url">
