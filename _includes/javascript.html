@@ -31,6 +31,10 @@
             bottom: true,
             zindex: '9999'
         });
+        $('.try-now').click(function(event) {
+            event.preventDefault();
+            $('.ui.modal').modal('show');
+        });
     });
 </script>
 <script>
@@ -90,4 +94,10 @@
             pagination: false
         });
     });
+    function handleCloudAction() {
+        window.open('https://marketplace.atlassian.com/plugins/pro.behave.hosted#cloud');
+    }
+    function handleServerAction() {
+        window.open('/products/behave-pro-server/')
+    }
 </script>

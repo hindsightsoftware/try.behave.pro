@@ -66,3 +66,15 @@ $on-laptop:        800px;
     display: none !important;
   }
 }
+
+.card {
+  padding: 30px !important;
+  color: #000;
+}
+
+a.card:hover {
+  text-decoration:none;
+}
+.features-row {
+  margin: 40px 0px;
+}

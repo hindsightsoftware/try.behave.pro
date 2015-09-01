@@ -202,10 +202,3 @@ function activatePulse() {
 
 $(document).on('scroll', handlePulse);
 resetValues(0, 0);
-
-function handleCloudAction() {
-    window.open('https://marketplace.atlassian.com/plugins/pro.behave.hosted#cloud');
-}
-function handleServerAction() {
-    window.open('/products/behave-pro-server/')
-}
