@@ -28,6 +28,11 @@ body {
     text-align: center;
 }
 
+.excerpt {
+    max-width: 800px;
+    margin: 0 auto !important;
+}
+
 .excerpt .image {
     text-align: center;
 }
@@ -56,4 +61,8 @@ body {
         height:50px;
         padding-top: 0px;
     }
+}
+
+.post-meta {
+    float: right;
 }
