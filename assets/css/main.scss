@@ -52,3 +52,17 @@ $on-laptop:        800px;
         "blog",
         "syntax-highlighting"
 ;
+
+.category {
+  display: inline-block;
+  padding-left: 15px;
+}
+.category::first-letter {
+  //text-transform: uppercase !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .product-blog-cta-container, .share-widget-container-fixed {
+    display: none !important;
+  }
+}

@@ -1,5 +1,5 @@
 # Site settings
-title: Your awesome title
+title: Behave Pro
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -14,6 +14,21 @@ github_username:  hindsightsoftware
 markdown: redcarpet
 highlighter: rouge
 
+bdd:
+  image: https://dpc1.ftcdn.net/jpg/00/76/81/38/500_F_76813842_linkfffxrfYGhHyQUVQ8DJgmXJZMK33v.jpg
+  colour: '#242D3C'
+agile:
+  image: https://dpc2.ftcdn.net/jpg/00/70/22/35/500_F_70223594_G6yQVefKNmLdoCdkiMXuKKzUsFClCvnI.jpg
+  colour: '#17C5CC'
+updates:
+  image: https://dpc2.ftcdn.net/jpg/00/70/22/35/500_F_70223594_G6yQVefKNmLdoCdkiMXuKKzUsFClCvnI.jpg
+  colour: '#17C5CC'
+engineering:
+  image: https://dpc2.ftcdn.net/jpg/00/74/72/15/500_F_74721510_mlBlSy1fRYWhOJxh0F8eUxyziIEd6bVi.jpg
+  colour: '#FECA5C'
+tips:
+  image: https://dpc2.ftcdn.net/jpg/00/74/72/15/500_F_74721510_mlBlSy1fRYWhOJxh0F8eUxyziIEd6bVi.jpg
+  colour: '#FECA5C'
 
 authors:
   aparkinson:
@@ -33,10 +48,12 @@ authors:
     author_image: "/assets/images/authors/gmccreadie.png"
     email: george.mccreadie@hindsightsoftware.co.uk
 
-paginate:	5
+paginate: 5
 
 permalink:     /blog/:categories/:year/:y_day/:title.html
-paginate_path: /blog/page:num
+paginate_path: "/blog/page:num"
+
+
 
 # social icons and sharing options
 social:

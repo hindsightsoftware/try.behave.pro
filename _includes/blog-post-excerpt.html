@@ -1,4 +1,28 @@
-<article class="ui segment" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+{% if site.[page.type] %}
+{% assign colour = site.[page.type].colour %}
+{% else %}
+{% assign cat = post.categories | first %}
+{% assign colour = site.[cat].colour %}
+{% endif %}
+{% if post.colour %}
+{% assign colour = post.colour %}
+{% endif %}
+<article class="ui basic segment excerpt" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+    <a href="{{ post.url }}" itemprop="url">
+        <div class="image" style="{{ 'background-color:' | append: colour }}">
+            {% if post.image %}
+            <img src="{{ post.image }}" />
+            {% elsif site.[page.type].image %}
+            <img src="{{ site.[page.type].image }}" />
+            {% else %}
+            <img src="{{ site.[cat].image }}" />
+            {% endif %}
+        </div>
+    </a>
+    <div class="post-meta">
+        <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
+        <!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
+    </div>
     <h2 class="ui header" itemprop="name">
         <div class="content">
             <a href="{{ post.url }}" itemprop="url">{{ post.title }}</a>
@@ -7,8 +31,4 @@
     <section class="post-excerpt" itemprop="description">
         <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
     </section>
-    <div class="post-meta">
-        <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-        <!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
-    </div>
 </article>

@@ -1,6 +1,5 @@
 ---
 layout: blog
-permalink: /blog/
 asset: blog
 ---
 
@@ -10,6 +9,18 @@ asset: blog
 <div class="ui vertical segment white">
     <div class="ui container">
 
+        <div style="text-align: right">
+            <div class="ui dropdown item">
+                Category
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    {% for category in site.categories %}
+                    <a class="item" href="/blog/{{ category | first }}">{{ category | first }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
         {% for post in paginator.posts %}
         {% include blog-post-excerpt.html %}
         {% endfor %}
@@ -17,7 +28,7 @@ asset: blog
         {% if paginator.total_pages > 1 %}
         <div class="pagination">
             {% if paginator.previous_page %}
-            <a rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
             {% else %}
             <span>&laquo; Prev</span>
             {% endif %}
@@ -26,20 +37,19 @@ asset: blog
             {% if page == paginator.page %}
             <em>{{ page }}</em>
             {% elsif page == 1 %}
-            <a href="{{ '/archives' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
             {% else %}
             <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
             {% endif %}
             {% endfor %}
 
             {% if paginator.next_page %}
-            <a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
             {% else %}
             <span>Next &raquo;</span>
             {% endif %}
         </div>
         {% endif %}
+        <p class="rss-subscribe"><a href="{{ "/blog/feed.xml" | prepend: site.baseurl }}"><i class="rss square icon"></i></a></p>
     </div>
 </div>
-
-<p class="rss-subscribe">subscribe <a href="{{ "/blog/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

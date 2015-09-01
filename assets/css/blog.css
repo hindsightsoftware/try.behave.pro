@@ -3,7 +3,7 @@ body {
 }
 .segment.white {
     background-color: #fff !important;
-    padding: 40px 0px 40px 0px;
+    padding: 18px 0px 40px 0px;
 }
 
 
@@ -14,87 +14,55 @@ body {
 
 
 
-.hidden.menu {
-    display: none;
+.masthead.segment {
+    min-height: 0 !important;
 }
 
-.masthead .logo.item img {
-    margin-right: 1em;
-}
-.masthead .ui.menu .ui.button {
-    margin-left: 0.5em;
-}
-.masthead h1.ui.header {
-    margin-top: 3em;
-    margin-bottom: 0em;
-    font-size: 4em;
-    font-weight: normal;
-}
-.masthead h2 {
-    font-size: 1.7em;
-    font-weight: normal;
+.post img {
+    max-width: 100%;
+    max-height: 400px;
 }
 
-.ui.inverted.segment {
-    background-color: #1A243A;
+.post-image {
+    width: 100%;
+    text-align: center;
 }
 
-.ui.vertical.stripe {
-    /*padding: 8em 0em;*/
-}
-.ui.vertical.stripe h3 {
-    font-size: 2em;
-}
-.ui.vertical.stripe .button + h3,
-.ui.vertical.stripe p + h3 {
-    margin-top: 3em;
-}
-.ui.vertical.stripe .floated.image {
-    clear: both;
-}
-.ui.vertical.stripe p {
-    font-size: 1.33em;
-}
-.ui.vertical.stripe .horizontal.divider {
-    margin: 3em 0em;
+.excerpt {
+    max-width: 800px;
+    margin: 0 auto !important;
 }
 
-.quote.stripe.segment {
-    padding: 0em;
+.excerpt .image {
+    text-align: center;
 }
-.quote.stripe.segment .grid .column {
-    padding-top: 5em;
-    padding-bottom: 5em;
-}
-
-.footer.segment {
-    padding: 5em 0em;
+.excerpt img {
+    max-width: 100%;
+    max-height: 400px;
 }
 
-.secondary.pointing.menu .toc.item {
-    display: none;
+.pagination {
+    float: left;
+}
+.rss-subscribe {
+    float: right;
 }
 
-@media only screen and (max-width: 700px) {
-    .ui.fixed.menu {
-        display: none !important;
+.blog-header {
+    height:64px;
+    padding-top: 3px !important;
+}
+.blog-header .right.menu a.item {
+    top: -2px;
+}
+
+@media only screen and (max-width: 767px) {
+    .blog-header {
+        height:50px;
+        padding-top: 0px;
     }
-    .secondary.pointing.menu .item,
-    .secondary.pointing.menu .menu {
-        display: none;
-    }
-    .secondary.pointing.menu .toc.item {
-        display: block;
-    }
-    .masthead.segment {
-        /*min-height: 350px;*/
-    }
-    .masthead h1.ui.header {
-        font-size: 2em;
-        margin-top: 1.5em;
-    }
-    .masthead h2 {
-        margin-top: 0.5em;
-        font-size: 1.5em;
-    }
+}
+
+.post-meta {
+    float: right;
 }
