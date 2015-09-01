@@ -66,3 +66,7 @@ body {
 .post-meta {
     float: right;
 }
+
+p.input {
+    margin-left: 1em;
+}
