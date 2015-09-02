@@ -202,3 +202,12 @@ function activatePulse() {
 
 $(document).on('scroll', handlePulse);
 resetValues(0, 0);
+
+function resizeCloud() {
+    $('.jira-cloud').css({
+        height: $('.jira-server').height()
+    });
+}
+
+$(document).ready(resizeCloud);
+$(window).resize(resizeCloud);

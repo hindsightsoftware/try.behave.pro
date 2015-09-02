@@ -34,6 +34,9 @@
         $('.try-now').click(function(event) {
             event.preventDefault();
             $('.ui.modal').modal('show');
+            $('.jira-cloud-modal').css({
+                height: $('.jira-server-modal').height()
+            });
         });
     });
 </script>
