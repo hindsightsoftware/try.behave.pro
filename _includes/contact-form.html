@@ -1,0 +1,59 @@
+<script src="/assets/javascript/server-contact.js"></script>
+
+<form class="ui form" id="contact-form" onsubmit="dispatchEnquiry(event)">
+    <h4 class="ui dividing header">Behave Pro Evaluation</h4>
+    <div class="required field">
+        <label>Contact Details</label>
+        <div class="two fields">
+            <div class="field">
+                <input name="name" placeholder="Name" type="text">
+            </div>
+            <div class="field">
+                <input name="email" placeholder="Email" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="required field">
+        <label>Company</label>
+        <div class="two fields">
+            <div class="required field">
+                <input name="company" placeholder="Company Name" type="text">
+            </div>
+            <div class="required field">
+                <input name="jobTitle" placeholder="Job Title" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="required field">
+        <label>JIRA Instance</label>
+        <div class="two fields">
+            <div class="field">
+                <select name="jiraTier" class="ui fluid dropdown">
+                    <option value="">JIRA User Tier</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="250">250</option>
+                    <option value="500">500</option>
+                    <option value="2000">2000</option>
+                    <option value="10000">10000</option>
+                    <option value="10001">10000+</option>
+                </select>
+            </div>
+            <div class="field">
+                <input name="jiraId" placeholder="JIRA Server ID" type="text">
+                <input name="additionalField" value="behave" type="hidden">
+            </div>
+        </div>
+    </div>
+    <div class="ui success message">
+        <div class="header">You're all set!</div>
+        <p>Your enquiry has been sent, you'll hear from us very soon.</p>
+    </div>
+    <div class="ui error message">
+        <div class="header">That's an error</div>
+        <p>There has been a problem sending your enquiry, please email support@hindsightsoftware.co.uk</p>
+    </div>
+    <input class="ui button" name="submit" tabindex="0" type="submit">
+</form>

@@ -104,3 +104,55 @@
         window.open('/products/behave-pro-server/')
     }
 </script>
+
+{% if page.title == 'Behave Pro Server' %}
+<script>
+    $('#contact-form').form({
+        on: 'blur',
+        fields: {
+            name: {
+                identifier: 'name',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please enter your name'
+                }]
+            },
+            email: {
+                identifier: 'email',
+                rules: [{
+                    type: 'email',
+                    prompt: 'Please enter your email'
+                }]
+            },
+            companyName: {
+                identifier: 'company',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please enter your company'
+                }]
+            },
+            jobTitle: {
+                identifier: 'jobTitle',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please enter your job title'
+                }]
+            },
+            jiraTier: {
+                identifier: 'jiraTier',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please enter your jira tier'
+                }]
+            },
+            jiraId: {
+                identifier: 'jiraId',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Please enter your jira id'
+                }]
+            }
+        }
+    });
+</script>
+{% endif %}
