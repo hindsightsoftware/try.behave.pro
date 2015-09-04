@@ -28,11 +28,6 @@ body {
     text-align: center;
 }
 
-.excerpt {
-    max-width: 800px;
-    margin: 0 auto !important;
-}
-
 .excerpt .image {
     text-align: center;
 }
