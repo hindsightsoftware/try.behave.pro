@@ -92,10 +92,13 @@
 
   border-top: 1px solid #e4e4e4;
 
+  a.ui.button {
+    margin-left: 0px !important;
+  }
+
   a {
     text-decoration: none;
     color: #bbb;
-    padding-left: 12px;
     .hidden{
       display:none;
     }

@@ -34,14 +34,16 @@ asset: blog
 
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
-                {% for social in site.social %}
-                {% if social.share_url != null %}
-                <a class="icon-{{ social.icon }}" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}"
-                   onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-                    <i class="fa fa-{{ social.icon }}"></i><span class="hidden">{{ social.icon }}</span>
-                </a>
-                {% endif %}
-                {% endfor %}
+                <div class="ui icon buttons">
+                    {% for social in site.social %}
+                    {% if social.share_url != null %}
+                    <a class="ui blue button" href="{{ social.share_url }}{{ social.share_title }}{{page.title | cgi_escape}}{{ social.share_link }}{{site.url}}{{page.id}}"
+                       onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
+                        <i class="{{ social.icon }} icon"></i><span class="hidden">{{ social.icon }}</span>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
                 <div class="right menu">
                     <form action="//storyiq.us2.list-manage.com/subscribe/post?u=1161fa9d724126772d2e04bc1&amp;id=7fdf7fd767" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="signup-form validate" target="_blank" novalidate>
                         <p>Receive tips straight to your inbox </p>
