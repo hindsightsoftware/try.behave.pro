@@ -1,7 +1,9 @@
 # Site settings
 title: Behave Pro - Behavior Driven Development meets JIRA
 email: your-email@domain.com
-description: > Write great user stories in JIRA Agile the whole team can understand while building living documentation with automated acceptance tests using Cucumber, SpecFlow or Behat.
+description: > # this means to ignore newlines until "baseurl:"
+  Write great user stories in JIRA Agile following the whole team can understand while building living documentation
+  with automated acceptance tests using Cucumber, SpecFlow or Behat.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://try.behave.pro"
 twitter_username: behavepro
