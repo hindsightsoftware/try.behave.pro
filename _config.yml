@@ -15,20 +15,20 @@ markdown: redcarpet
 highlighter: rouge
 
 bdd:
-  image: https://dpc1.ftcdn.net/jpg/00/76/81/38/500_F_76813842_linkfffxrfYGhHyQUVQ8DJgmXJZMK33v.jpg
-  colour: '#242D3C'
+  image: /assets/images/blog/bdd.png
+  colour: '#406985'
 agile:
-  image: https://dpc2.ftcdn.net/jpg/00/70/22/35/500_F_70223594_G6yQVefKNmLdoCdkiMXuKKzUsFClCvnI.jpg
-  colour: '#17C5CC'
+  image: /assets/images/blog/agile.png
+  colour: '#fff'
 updates:
-  image: https://dpc2.ftcdn.net/jpg/00/70/22/35/500_F_70223594_G6yQVefKNmLdoCdkiMXuKKzUsFClCvnI.jpg
-  colour: '#17C5CC'
+  image: /assets/images/blog/updates.png
+  colour: '#127DC1'
 engineering:
-  image: https://dpc2.ftcdn.net/jpg/00/74/72/15/500_F_74721510_mlBlSy1fRYWhOJxh0F8eUxyziIEd6bVi.jpg
-  colour: '#FECA5C'
+  image: /assets/images/blog/engineering.png
+  colour: '#7AC7DB'
 tips:
-  image: https://dpc2.ftcdn.net/jpg/00/74/72/15/500_F_74721510_mlBlSy1fRYWhOJxh0F8eUxyziIEd6bVi.jpg
-  colour: '#FECA5C'
+  image: /assets/images/blog/tips.jpg
+  colour: '#A0E0D0'
 
 authors:
   aparkinson:
