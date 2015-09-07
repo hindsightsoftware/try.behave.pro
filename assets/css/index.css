@@ -1,3 +1,11 @@
+body.pushable {
+    background:none !important;
+}
+
+.pushable > .pusher {
+    overflow:initial;
+}
+
 .welcome-gif {
     left: 15%;
     border:solid 2px #c5c5c5;
