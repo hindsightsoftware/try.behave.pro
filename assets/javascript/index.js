@@ -206,10 +206,14 @@ $(document).on('scroll', handlePulse);
 resetValues(0, 0);
 
 function resizeCloud() {
-    $('.jira-cloud').css({
-        height: $('.jira-server').height()
+    $('.jira-server').css({
+        height: $('.jira-cloud').height()
     });
 }
 
 $(document).ready(resizeCloud);
 $(window).resize(resizeCloud);
+
+$('.menu .item')
+  .tab()
+;
