@@ -209,3 +209,19 @@
 .right.menu a.item {
     top: -2px;
 }
+
+@media only screen and (min-width: 1199px) {
+    .header-container {
+        margin-left: -19rem !important;
+    }
+}
+
+.tab p {
+    padding: 20px;
+}
+
+.centered {
+    text-align: center;
+    width: 100%;
+    display: block;
+}
