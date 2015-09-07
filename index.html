@@ -5,23 +5,13 @@ asset: index
 <div class="ui large top fixed hidden menu">
   <div class="ui container">
     <a class="item" href="/"><img src="/assets/images/logo_light.png" style="width: 9.5em"/></a>
-    <div class="right menu">
-      <a class="item" href="#features">Features</a>
-      <a class="item" href="#pricing">Pricing</a>
-      <a class="item" href="/blog">Blog</a>
-      <div class="item">
-        <a class="ui primary button try-now">Try now</a>
-      </div>
-    </div>
+    {% include main-menu.html %}
   </div>
 </div>
 
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
-  <a class="active item" href="/">Home</a>
-  <a class="item" href="#features">Features</a>
-  <a class="item" href="#pricing">Pricing</a>
-  <a class="ui item" href="/blog/">Blog</a>
+  {% include sidebar-menu.html %}
 </div>
 
 
@@ -35,14 +25,7 @@ asset: index
           <i class="sidebar icon"></i>
         </a>
         <a class="item" href="/"><img src="/assets/images/logo.png" style="width: 9.5em"/></a>
-        <div class="right menu">
-          <a class="item" href="#features">Features</a>
-          <a class="item" href="#pricing">Pricing</a>
-          <a class="item" href="/blog/">Blog</a>
-          <div class="item">
-            <a class="ui inverted button try-now">Try now</a>
-          </div>
-        </div>
+        {% include main-menu.html inverted="true" %}
       </div>
     </div>
 
