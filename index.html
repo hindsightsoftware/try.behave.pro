@@ -26,7 +26,7 @@ asset: index
 
 
 <!-- Page Contents -->
-<div style="height:100%">
+<div style="height:100%" class="pusher">
   <div class="ui inverted vertical masthead center aligned segment" style="min-height:100%; overflow:hidden">
 
     <div class="ui container">
@@ -47,7 +47,7 @@ asset: index
     </div>
 
     <div class="ui text container">
-      <div class="ui stackable grid">
+      <div class="ui stackable grid header-container">
         <div class="ten wide column">
           <h1 class="ui inverted header" style="font-size: 3em;">
             Behaviour Driven Development meets JIRA
@@ -157,11 +157,11 @@ asset: index
         <i class="dollar icon"></i> Pricing
       </h4>
 
-      <div class="row centered aligned" style="padding-top: 30px;display: block;">
+      <div class="row centered aligned computer only" style="padding-top: 30px;display: block;">
         Select <a onclick="pricingSwitcher('pricing-cloud')">cloud</a> or <a onclick="pricingSwitcher('pricing-server')">server</a>
       </div>
 
-      <div class="row features-row slider-container" style="margin: 20px 0px !important; opacity: 0.2">
+      <div class="row features-row slider-container computer only" style="margin: 20px 0px !important; opacity: 0.2">
         <div class="sixteen wide left aligned column"  id="cloud-pricing">
           <h3 class="ui header" style="font-size: 1.5em;">
             <div class="content">
@@ -189,7 +189,7 @@ asset: index
     </div>
 
     <div class="ui middle aligned stackable grid container">
-      <div class="row features-row">
+      <div class="row features-row computer only">
         <div class="eight wide left aligned column">
           <div class="ui one cards">
             <a class="blue card" id="pricing-cloud" onclick="pricingSwitcher(this.id)">
@@ -199,7 +199,7 @@ asset: index
                   Cloud
                 </div>
               </h2>
-              <p class="jira-cloud">If you use JIRA Cloud, then you should choose Behave Pro Cloud. Be up and running at the click of a button and benefit from better User Stories straight away. We take care of the hosting, backups, and security with 99.9% uptime. It couldn’t be simpler.</p>
+              <p class="jira-cloud">Atlassian hosting JIRA in the cloud for you? Then choose Behave Pro Cloud and you can be up and running in minutes.</p>
               <button onclick="handleCloudAction()" class="ui blue button action-button">Evaluate now</button></a>
             </a>
           </div>
@@ -214,10 +214,32 @@ asset: index
                   Server
                 </div>
               </h2>
-              <p class="jira-server">If you host JIRA on your own server, then choose Behave Pro server. Completely secure, we host on a Virtual Machine,meaning that we will never slow down or crash your JIRA instance. Plus, if anything happens to Behave Pro, JIRA will work as usual. Find out more about our installation process here.</p>
-              <button onclick="handleServerAction()" class="ui blue button action-button">Contact us</button>
+              <p class="jira-server">Host JIRA on your own hardware and behind the firewall? Then you need Behave Pro Server.</p>
+              <button onclick="handleServerAction()" class="ui blue button action-button">Evaluate now</button>
             </a>
           </div>
+        </div>
+      </div>
+      <div class="row features-row mobile tablet only" style="margin: 42px;">
+        <div class="ui top attached tabular menu">
+          <a class="active item" data-tab="first"><i class="cloud icon"></i> Cloud</a>
+          <a class="item" data-tab="second"><i class="server icon"></i> Server</a>
+        </div>
+        <div class="ui bottom attached active tab segment" data-tab="first">
+          <p>
+            Atlassian hosting JIRA in the cloud for you? Then choose Behave Pro Cloud and you can be up and running in minutes
+          </p>
+          <span class="centered">
+            <a href="https://marketplace.atlassian.com/plugins/pro.behave.hosted#cloud" target="_blank" class="ui blue button">Evaluate Now</a>
+          </span>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="second">
+          <p>
+            Host JIRA on your own hardware and behind the firewall? Then you need Behave Pro Server
+          </p>
+          <span class="centered">
+            <a href="/products/behave-pro-server/" target="_blank" class="ui blue button">Evaluate Now</a>
+          </span>
         </div>
       </div>
     </div>
