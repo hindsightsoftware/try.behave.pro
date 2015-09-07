@@ -5,8 +5,10 @@ permalink: /products/behave-pro-server/
 asset: page
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non arcu at purus gravida viverra ut et tellus. Morbi ullamcorper et mi eget interdum. Praesent a odio nulla. Duis mi nulla, feugiat quis cursus id, vestibulum vitae sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris commodo ullamcorper neque, non pretium velit venenatis non. Maecenas non posuere metus, at sodales nibh. Sed a risus accumsan, euismod mi at, interdum nulla. Nulla vel lacus vitae risus rutrum vehicula.
+We understand that privacy and security is of great importance to many companies. For those not ready for the Cloud, Behave Pro is available as a virtual appliance that can be run on your own private server and supports JIRA Server and Data Center
 
-Behave Pro Server
+The Behave Pro Server appliance supports enterprise customers using JIRA Data Center with high availability and performance at scale with active-active clustering and linear scaling across multiple nodes. We utilize these same enterprise capabilities to deliver Behave Pro Cloud with a 99.99% uptime SLA.
+
+To start an evaluation of Behave Pro Server just fill out the form below
 
 {% include contact-form.html %}
