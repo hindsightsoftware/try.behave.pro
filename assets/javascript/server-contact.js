@@ -23,7 +23,7 @@ function dispatchEnquiry(event) {
         $('#contact-form').addClass('loading');
         console.log('form submitted');
         $.ajax({
-            url: 'http://try-behave-pro-contact.elasticbeanstalk.com/submit/enquiry/',
+            url: 'https://try.behave.pro/submit/enquiry/',
             type: "POST",
             data: JSON.stringify(data),
             contentType: "application/json; charset=utf-8",
