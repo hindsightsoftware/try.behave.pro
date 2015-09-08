@@ -27,7 +27,7 @@ engineering:
   image: /assets/images/blog/engineering.png
   colour: '#7AC7DB'
 tips:
-  image: /assets/images/blog/tips.jpg
+  image: /assets/images/blog/tips.png
   colour: '#A0E0D0'
 
 authors:

@@ -3,9 +3,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-08-10 21:29:12
 author: aparkinson
-categories: jekyll updates
-image: https://dpc1.ftcdn.net/jpg/00/74/72/18/500_F_74721807_AOPrnrG0b2TNKnFZyPkOFNlk9ImNrs3r.jpg
-colour: '#fff'
+categories: updates
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
