@@ -3,7 +3,7 @@ title: Webinar - Are your development teams facing a Requirements Crisis?
 author: jmunday
 date: 2014-06-27
 layout: post
-categories: updates
+categories: bdd
 ---
 **Webinar - Are your development teams facing a Requirements Crisis?**
 

@@ -1,0 +1,12 @@
+<div class="right menu">
+    <a class="item" href="/#features">Features</a>
+    <a class="item" href="/#pricing">Pricing</a>
+    <a class="item" href="/blog/">Blog</a>
+    <div class="item">
+        {% if include.inverted == "true" %}
+            <a class="ui inverted button try-now">Try now</a>
+        {% else %}
+            <a class="ui primary button try-now">Try now</a>
+        {% endif %}
+    </div>
+</div>

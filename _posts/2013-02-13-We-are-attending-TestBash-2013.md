@@ -3,7 +3,7 @@ title: We are attending TestBash 2013
 author: aparkinson
 date: 2013-02-13
 layout: post
-categories: updates
+categories: agile
 ---
 
 ![Test Bash 2013 Logo](/assets/images/post/testbash.jpg) 

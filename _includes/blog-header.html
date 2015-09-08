@@ -1,9 +1,6 @@
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
-  <a class="item" href="/">Home</a>
-  <a class="item" href="/#features">Features</a>
-  <a class="item" href="/#pricing">Pricing</a>
-  <a class="active item" href="/blog/">Blog</a>
+  {% include sidebar-menu.html %}
 </div>
 
 <div class="ui inverted vertical masthead center aligned segment blog-header">
@@ -14,14 +11,7 @@
         <i class="sidebar icon"></i>
       </a>
       <a class="item" href="/"><img src="/assets/images/logo.png" style="width: 9.5em"/></a>
-      <div class="right menu">
-        <a class="item" href="/#features">Features</a>
-        <a class="item" href="/#pricing">Pricing</a>
-        <a class="item" href="/blog/">Blog</a>
-        <div class="item">
-          <a class="ui inverted button try-now">Try now</a>
-        </div>
-      </div>
+      {% include main-menu.html inverted="true" %}
     </div>
   </div>
 </div>

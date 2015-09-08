@@ -4,7 +4,7 @@ title: EU Report on Risks and Vulnerabilities in the EU Financial system
 author: aparkinson
 date: 2014-04-28
 layout: post
-categories: updates bdd
+categories: bdd
 ---
 
 On the 2nd April, the EU released a report on [Risks and Vulnerabilities in the EU Financial system](http://www.eba.europa.eu/-/european-supervisory-authorities-highlight-cross-sectoral-ris-1), which focuses on the importance of robust IT systems for financial institutions. 

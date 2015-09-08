@@ -1,0 +1,14 @@
+{% if page.layout == 'homepage' %}
+    <a class="active item" href="/">Home</a>
+{% else %}
+    <a class="item" href="/">Home</a>
+{% endif %}
+
+<a class="item" href="/#features">Features</a>
+<a class="item" href="/#pricing">Pricing</a>
+
+{% if page.layout == 'blog' %}
+    <a class="active item" href="/blog/">Blog</a>
+{% else %}
+    <a class="item" href="/blog/">Blog</a>
+{% endif %}

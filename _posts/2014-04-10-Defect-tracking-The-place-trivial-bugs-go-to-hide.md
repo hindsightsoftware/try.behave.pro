@@ -4,7 +4,7 @@ title: Defect tracking - The place trivial bugs go to hide
 author: aparkinson
 date: 2014-04-10
 layout: post
-categories: [engineering, bdd]
+categories: engineering agile
 ---
 
 Two weeks ago I was at the excellent TestBash in Brighton and as you do at conferences you get into discussions and debates with new people. While leaving the conference to head to the after party I got into one such heated conversation with Carly Dyson ([@carlymdyson](https://twitter.com/carlymdyson)) with some input from Zac Borrelli ([@zacoid55](https://twitter.com/zacoid55)) and Stephen Blower ([@badbud65](https://twitter.com/badbud65)). The topic “Should you report trivial bugs like missing full stops”. 

@@ -3,7 +3,7 @@ title: Is this User Story Ready?
 author: aparkinson
 date: 2015-05-11
 layout: post
-categories: tips bdd updates
+categories: updates bdd
 ---
 
 Before work can start on a User Story or Issue the team needs to have a discussion with the Product Owner to understand the Requirements or the wrong “thing” will be be delivered. Everyone in the Team should be involved in this discussion to build a common understanding and BDD helps further by using Examples to clarify the requirements and build a ubiquitous language amongst the team.

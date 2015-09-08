@@ -4,8 +4,7 @@ title: Charlie Dowler on being an Apprentice at Hindsight Software
 author: Jane Munday
 date: 2014-05-07
 layout: post
-categories: updates
-
+categories: engineering
 ---
 
 Charlie Dowler is an apprentice at Hindsight Software. He joined the company in May 2013 and primarily works on Frontend Development, User Interface development and more recently learning server side code

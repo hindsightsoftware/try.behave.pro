@@ -4,7 +4,7 @@ title: Roundtable on BDD and the Requirements Crisis in Financial Markets
 author: aparkinson
 date: 11-05-2014
 layout: post
-categories: updates agile bdd
+categories: bdd agile
 
 ---
 

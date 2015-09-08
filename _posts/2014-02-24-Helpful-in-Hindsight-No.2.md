@@ -3,7 +3,7 @@ title: Helpful in Hindsight No.2
 author: jmunday
 date: 2014-02-24
 layout: post
-categories: bdd agile engineering
+categories: bdd agile
 ---
 
 This is the second article in the Helpful in Hindsight Series. Helpful in Hindsight is a compendium of useful online resources relating to Automated Testing, Theory of Testing, BDD, ATTD, TTD and other topics of interest. It is designed to be a resource library, where people can access Best Practice advice and useful hints & tips, from recognised industry experts.
