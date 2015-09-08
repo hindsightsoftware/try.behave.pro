@@ -3,7 +3,7 @@ title: Helpful in Hindsight No.3
 author: jmunday
 date: 2014-03-06
 layout: post
-categories: engineering
+categories: bdd agile
 ---
 
 This weeks Helpful in Hindsight articles focus on Continuing Professional Development. Part of building your career in Testing is developing your skills, knowledge of the current trends, as well as the understanding the business case for testing.

@@ -3,7 +3,7 @@ title: BDD & The Requirements Crisis Whitepaper
 author: jmunday
 date: 2014-04-23
 layout: post
-categories: updates bdd
+categories: bdd
 ---
 Are Financial Markets Facing a Requirements Crisis?      
 And does the answer lie in Behaviour-Driven Development?

@@ -4,7 +4,7 @@ title: Digesting CukeUp! 2013
 author: aparkinson
 date: 2013-04-13
 layout: post
-categories: updates engineering
+categories: bdd engineering
 ---
 
 On the 4th of April the annual [CukeUp! Conference](http://skillsmatter.com/event/java-jee/cukeup-2013) for Cucumber and related tools. [Gideon Goldberg](http://www.guardian.co.uk/profile/gideon-goldberg) from the software 

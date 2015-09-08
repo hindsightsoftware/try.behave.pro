@@ -3,7 +3,7 @@ title: One day tutorial on Cucumber-JVM at jDays Gothenburg
 author: aparkinson
 date: 2012-10-08
 layout: post
-categories: updates bdd
+categories: bdd
 ---
 
 ![jDays Speaker Emblem](/assets/images/post/jDays_logo_RGB_speaker_emblem_pa1.png) 

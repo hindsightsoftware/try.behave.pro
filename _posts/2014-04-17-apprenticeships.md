@@ -4,7 +4,7 @@ title: Apprenticeships
 author: aparkinson
 date: 2014-04-17
 layout: post
-categories: updates
+categories: engineering
 ---
 
 There is a lot of talk within the IT industry of a skills shortage, a lack of talented recruits for employers. For too long now the software industry has recruited from University graduates. At Hindsight we believe this University focus is short sighted and detrimental to the industry. There are many capable people who do not go to university for a variety reasons; exam nerves, Illness, and cost of University tuition fees are all valid reasons. Because we value talented people and practical skills over theoretical knowledge, we have established our own apprenticeship programme at Hindsight.

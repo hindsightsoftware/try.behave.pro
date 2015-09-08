@@ -3,7 +3,7 @@ title: Testing in the Pub - BDD Episode
 author: jmunday
 date: 2015-03-16
 layout: post
-categories: tips bdd updates
+categories: bdd
 ---
 
 Recently our CEO and resident BDD expert Alan Parkinson was recently interviewed by Dan Ashby from the "Testing in the Pub" podcast. For those not in the know [Testing in the Pub](http://testinginthepub.co.uk/testinginthepub/testing/tdd-bdd-alan-parkinson/) covers features discussion on subjects relevant to the software testing community. Alan popped into Episode 16 to bust a few of the Behavior Driven Development myths and cover its true purpose.

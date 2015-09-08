@@ -3,7 +3,7 @@ title: BDD & The Requirements Crisis
 author: jmunday
 date: 2014-04-15
 layout: post
-categories: bdd updates
+categories: bdd
 ---
 #Can BDD help solve the software requirements crisis in the financial sector?
 
