@@ -233,3 +233,7 @@ body.pushable {
     width: 100%;
     display: block;
 }
+
+.fancybox-lock {
+    overflow: visible !important;
+}

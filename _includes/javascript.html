@@ -1,6 +1,6 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/semantic.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.1/js/lightbox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
 
 <script type="text/javascript" src="/assets/javascript/blogcta.js"></script>
@@ -96,6 +96,9 @@
             items: 4,
             pagination: false
         });
+
+        $(".lightbox").fancybox();
+        $(".fancybox").fancybox();
     });
     function handleCloudAction() {
         window.open('https://marketplace.atlassian.com/plugins/pro.behave.hosted#cloud');
