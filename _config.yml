@@ -57,6 +57,8 @@ paginate: 5
 permalink:     /blog/:categories/:year/:y_day/:title.html
 paginate_path: "/blog/page:num"
 
+gems:
+  - jekyll-sitemap
 
 
 # social icons and sharing options

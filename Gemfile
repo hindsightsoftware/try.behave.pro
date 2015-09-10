@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll', '~> 2.5.3'
+gem 'jekyll-sitemap', '~> 0.8.1'
 gem 's3_website', '~> 2.11.0'
 gem 'bourbon', '~> 4.2.3'
 gem 'jekyll-sass-converter', '~> 1.3.0'

@@ -3,6 +3,7 @@ layout: page
 title:
 permalink: /form-submission/success/
 asset: page
+sitemap: false
 ---
 
 ## Thanks for contacting us
