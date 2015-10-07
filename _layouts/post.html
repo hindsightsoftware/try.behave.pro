@@ -5,7 +5,7 @@ asset: blog
 {% assign author = site.authors[page.author] %}
 {% assign cat = page.categories | first %}
 <div class="ui vertical segment white">
-<article class="ui container post">
+<article class="ui container post" style="max-width: 800px !important;">
   <header class="post-header">
       <div class="post-image" style="{{'background-color: ' | append: site.[cat].colour}}">
           {% if page.image %}
