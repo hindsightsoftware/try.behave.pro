@@ -18,9 +18,14 @@ body {
     min-height: 0 !important;
 }
 
-.post img {
+.post-header img {
     max-width: 100%;
     max-height: 400px;
+}
+
+.post-content img {
+    max-width: 770px;
+    text-align: center;
 }
 
 .post-image {
