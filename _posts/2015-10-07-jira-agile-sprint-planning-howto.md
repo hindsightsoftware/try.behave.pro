@@ -6,7 +6,7 @@ layout: post
 categories: agile tips
 ---
 
-It is often recommended for the Product Owner to bring two sprint's worth of User Stories to [Sprint Planning](https://www.mountaingoatsoftware.com/agile/scrum/sprint-planning-meeting). Getting familiar with a couple of JIRA Agile’s features can help the Product Owner prepare for the planning meeting.
+It is often recommended for the Product Owner to [bring two sprint's worth of User Stories](https://www.mountaingoatsoftware.com/agile/scrum/sprint-planning-meeting) to Sprint Planning. Getting familiar with a couple of JIRA Agile’s features can help the Product Owner prepare for the planning meeting.
 
 What we need is a method of selecting a group of issues as our two sprint's worth and just displaying this group during Sprint Planning. 
 
