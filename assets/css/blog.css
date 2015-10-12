@@ -25,12 +25,18 @@ body {
 
 .post-content img {
     max-width: 770px;
+    padding: 0 15px;
     text-align: center;
+    width: 100%;
 }
 
 .post-image {
     width: 100%;
     text-align: center;
+}
+
+.post-content p {
+    text-align: justify;
 }
 
 .excerpt .image {

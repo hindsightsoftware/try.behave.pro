@@ -33,7 +33,9 @@ It can be useful to email ahead of time certain team members the User Stories an
 
 The first step is to start a new Issue Search in JIRA (Issues -> “Search for Issues” menu item on the top navigation bar) and enter the following JQL Query 
 ```project = SSP AND resolution = Unresolved AND labels in (SprintPlanning)```
-. This will return all your items selected for Planning. Note: you will need to change the project key and may need to put the search into advanced mode.
+. This will return all your items selected for Planning.
+
+*Note: you will need to change the project key and may need to put the search into advanced mode.*
 
 Use the “Save As” button (Top left corner) to save the filter with a memorable name. Open the “details” inline dialog of the save filter and adjust the permissions so your colleagues can access it.
 
